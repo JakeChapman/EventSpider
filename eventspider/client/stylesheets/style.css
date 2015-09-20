@@ -1,3 +1,11 @@
+#mainHeader
+{
+  font-style: normal;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+
 .grid-block, .main, .event, .comments li, .comment-form
 {
   background: #fff;
