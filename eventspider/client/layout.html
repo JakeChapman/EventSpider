@@ -1,0 +1,15 @@
+<template name="layout">
+  <body>
+    <div class="container">
+      <header>
+        {{> header}}
+      </header>
+      <div id="main">
+        {{> yield}}
+      </div>
+      <footer>
+        {{> nav}}
+      </footer>
+    </div>
+  </body>
+</template>

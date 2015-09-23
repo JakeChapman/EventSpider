@@ -9,3 +9,5 @@ autopublish
 insecure
 twbs:bootstrap
 underscore
+iron:router
+rzymek:fullcalendar
