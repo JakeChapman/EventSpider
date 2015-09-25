@@ -2,8 +2,11 @@ Router.configure({
   layoutTemplate:'layout'
 });
 Router.map(function () {
-  this.route('masterCalendar', {
+  this.route('login', {
     path: '/',  //overrides the default '/home'
+  });
+  this.route('masterCalendar', {
+    path: '/masterCalendar'
   });
   this.route('eventsList', {
     path: '/events',
