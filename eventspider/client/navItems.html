@@ -1,0 +1,22 @@
+<template name="navItems">
+  <ul class="sidebar-nav">
+    <div class="sidebar-profile">
+      <div class="col-md-6" id="profile-picture">
+        <img src="got.jpg" height="75px" width="75px"/>
+      </div>
+      <div class="col-md-6" id="profile-info">
+        <p id="p-info">John Smith</p>
+        <p id="p-info">Stats</p>
+      </div>
+    </div>
+    <div class="sidebar-links col-md-12">
+      <li class="{{ activeIfTemplateIs 'masterCalendar' }}">
+         <a href="{{ pathFor 'masterCalendar'}}">Master Calendar</a>
+       </li>
+       <li class="{{ activeIfTemplateIs 'eventsList' }}">
+          <a href="{{ pathFor 'eventsList'}}">Events List</a>
+        </li>
+      <li><a href="{{ pathFor 'schoolList'}}">Find Your School</a></li>
+    </div>
+  </ul>
+</template>

@@ -1,20 +1,13 @@
 <template name="schoolItem">
-  <div class="school">
-    <div class="well well-large">
-        <div class="search_label">
-            <label for="search">Find Your School</label><br />
-            <input type="text" name="search" value="" id="search">
-        </div>
-        Nearby Schools
+  <div class="schools">
         <!-- TODO: make list dynamic -->
         <div class="school-content">
-          <h3><a href="{{url}}">{{title}}</a><span>{{domain}}</span></h3>
+          <a href="{{url}}">{{title}}</a><span>{{domain}}</span>
         </div>
         <!-- <ul>
           <li>Northern Kentucky University</li>
           <li>Xavier University</li>
           <li>Thomas More College</li>
         </ul> -->
-    </div>
   </div>
 </template>

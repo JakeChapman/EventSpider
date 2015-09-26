@@ -1,6 +1,6 @@
 Template.schoolList.helpers({
   schools: function()
   {
-    return School.find();
+    return Schools.find();
   }
 });

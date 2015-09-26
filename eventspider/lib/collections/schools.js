@@ -21,8 +21,8 @@ if (Meteor.isServer)
           url: 'http://thomasmore.edu'
         }
       ];
-      schools.forEach(function (school) {
-        Schools.insert(school);
+      schools.forEach(function (event) {
+        Schools.insert(event);
       })
     }
   });
