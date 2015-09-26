@@ -21,4 +21,7 @@ Router.map(function () {
     path: '/schools',
     data: function() {return Schools.find()}
   });
+  this.route('topics', {
+    path: '/topics'
+  });
 });
