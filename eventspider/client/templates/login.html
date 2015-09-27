@@ -3,24 +3,29 @@
   <div class="login" id="login-wrapper">
     <div class="login-content">
       <img src="logo.png" alt="Company Image" id="logo"/>
-      <div class="form-group">
+      <div class="form-group form-signin" id="loginForm">
         <div class="input-group">
           <div class="input-group-addon"><span class="glyphicon glyphicon-envelope"></span></div>
           <input type="email" class="form-control" id="userEmail" placeholder="Email address">
         </div>
-      </div>
-      <div class="form-group">
+        <br>
         <div class="input-group">
           <div class="input-group-addon"><span class="glyphicon glyphicon-lock"></span></div>
           <input type="password" class="form-control" id="userPassword" placeholder="Password">
         </div>
+        <div id="ResetPassword">
+          <a href="{{ pathFor 'masterCalendar'}}">Forget your password?</a>
+        </div>
+        <div class="btn" id="loginBtn">
+          <button class="btn btn-lg btn-primary btn-block" type="submit">Login</button>
+        </div>
       </div>
-      <div id="ResetPassword">
-        <a href="{{ pathFor 'masterCalendar'}}">Forget your password?</a>
-      </div>
-      <div class="btn">
-        <button class="btn btn-lg btn-primary btn-block" type="submit">Login</button>
-      </div>
+      <a href="http://facebook.com" class="icon-button facebook">
+        <i class="icon-facebook"></i><span></span>
+      </a>
+      <a href="http://plus.google.com" class="icon-button google-plus">
+        <i class="icon-google-plus"></i><span></span>
+      </a>        
     </div>
   </div>
 </template>
