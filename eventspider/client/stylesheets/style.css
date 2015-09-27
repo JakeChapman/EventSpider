@@ -17,6 +17,35 @@ body {
   overflow: hidden;
   width: 100%;
 }
+/* Events Page */
+
+.events {
+  background-color: #003399;
+  height: 100%;
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+  float: left;
+  top: 0;
+  overflow: scroll;
+  margin-bottom: 10%;
+}
+.event {
+  border-radius: 25px;
+  background-color: white;
+  color: LightGray;
+  width: 50%;
+  height: 30%;
+  margin-left: 25%;
+  margin-right: 25%;
+}
+.event-content {
+  margin-left: 5%;
+  margin-right: 5%;
+  margin-top: 1%;
+  margin-bottom: 5%;
+}
+/* End Events Page */
 /* Login Page */
 .login-content {
   height: 100%;
