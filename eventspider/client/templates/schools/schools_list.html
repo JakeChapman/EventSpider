@@ -1,0 +1,8 @@
+<template name="schoolList">
+  <div class="schools">
+    {{> schoolFind}}
+    {{#each schools}}
+      {{> schoolItem}}
+    {{/each}}
+  </div>
+</template>

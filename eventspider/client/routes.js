@@ -17,4 +17,11 @@ Router.map(function () {
     data: function () {return Events.findOne({_id: this.params._id})},
     template: 'fullEvent'
   });
+  this.route('schoolList', {
+    path: '/schools',
+    data: function() {return Schools.find()}
+  });
+  this.route('topics', {
+    path: '/topics'
+  });
 });

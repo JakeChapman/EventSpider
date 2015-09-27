@@ -14,3 +14,20 @@ if (Events.find().count() === 0) {
     url: 'http://robots.com'
     });
 }
+
+if (Schools.find().count() === 0) {
+  Schools.insert({
+    title: 'Northern Kentucky University',
+    url: 'http://nku.edu'
+  });
+
+  Schools.insert({
+    title: 'Xavier University',
+    url: 'http://xavier.edu'
+  });
+
+  Schools.insert({
+    title: 'Thomas More College',
+    url: 'http://thomasmore.edu'
+  });
+}
