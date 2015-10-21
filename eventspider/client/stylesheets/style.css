@@ -1,3 +1,6 @@
+ul.notifications {
+  position: fixed;
+}
 #mainHeader
 {
   font-style: normal;
@@ -46,6 +49,43 @@ body {
   margin-bottom: 5%;
 }
 /* End Events Page */
+/* Registration Page */
+i#confirmMatch-email, i#confirmMatch-password {
+  color: green;
+}
+i#confirmWrong-email, i#confirmWrong-password {
+  color: red;
+}
+#register-form {
+  display: inline-block;
+}
+.register-content {
+  height: 100%;
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+  text-align: center;
+}
+#confirm-email, #confirm-password {
+  float: right;
+}
+#register-form input {
+  margin-bottom: 2%;
+}
+#register-button {
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  background-color: LightGray;
+  color: Black;
+  width: 100%;
+  border: none;
+  margin: 0 auto;
+  margin-top: 10%;
+}
+
+/* End Registration Page */
 /* Login Page */
 .login-content {
   height: 100%;
@@ -104,6 +144,22 @@ body {
   margin: 0 auto;
 }
 #loginBtn button {
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  background-color: LightGray;
+  color: Black;
+  width: 100%;
+  border: none;
+  margin: 0 auto;
+}
+
+#newUser {
+  width: 100%;
+  margin: 0 auto;
+}
+#newUser button {
   border-top-left-radius: 0;
   border-top-right-radius: 0;
   border-bottom-left-radius: 0;
