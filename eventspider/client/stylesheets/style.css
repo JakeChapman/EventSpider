@@ -221,6 +221,18 @@ body {
   margin-top: 10px;
 }
 
+#blocktext {
+    margin-left: 15%;
+    margin-top: 15%;
+    width: 12em;
+}
+
+#border-bottom {
+    border-bottom-style: solid;
+    border-bottom-color: black;
+    border-bottom-width: 2px;
+}
+
 @media(min-width:768px) {
     #wrapper {
         padding-left: 250px;
@@ -245,5 +257,11 @@ body {
     #wrapper.toggled #page-content-wrapper {
         position: relative;
         margin-right: 0;
+    }
+
+    #blocktext {
+        margin-left: 15%;
+        margin-top: 5%;
+        width: 12em;
     }
 }
