@@ -1,26 +1,17 @@
 <template name="layout">
-  <head>
-      <meta http-equiv="cleartype" content="on">
-      <meta name="MobileOptimized" content="320">
-      <meta name="HandheldFriendly" content="True">
-      <meta name="apple-mobile-web-app-capable" content="yes">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-  </head>
-  <header>
-    {{> header}}
-  </header>
-  <body>
-    <div id="wrapper" class="toggled">
+  {{> header}}
+  <div class="container" id="main-content">
+    <div id="wrapper">
       <!-- Sidebar -->
       <div id="sidebar-wrapper">
-          {{> navItems}}
+        {{> navItems}}
       </div>
       <!-- /#sidebar-wrapper -->
       <div id="page-content-wrapper">
-          {{> yield}}
+        {{> yield}}
       </div>
     </div>
-  </body>
+  </div>
   <footer>
     {{> nav}}
   </footer>

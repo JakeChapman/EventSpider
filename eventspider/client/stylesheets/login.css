@@ -1,0 +1,109 @@
+@media only screen and (max-device-width: 480px) {
+  /* Login Page */
+  .login {
+    padding-top: 5%;
+    padding-bottom: 10%;
+  }
+  .login-content {
+    height: 100%;
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+  }
+  #logo {
+    height: 40%;
+    width: 30%;
+    margin: 0 auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+  }
+  .background-image {
+    background: url("login-background.jpg") no-repeat center center fixed;
+    -webkit-background-size: 100% 100%;
+    -moz-background-size: 100% 100%;
+    -o-background-size: 100% 100%;
+    background-size: 100% 100%;
+    -webkit-filter: blur(5px);
+    -moz-filter: blur(5px);
+    -o-filter: blur(5px);
+    -ms-filter: blur(5px);
+    filter: blur(5px);
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    float: left;
+  }
+  #ResetPassword {
+    text-align: center;
+  }
+  #ResetPassword a {
+    color: LightSlateGray;
+  }
+  #userEmail, #userPassword, .input-group-addon {
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    box-sizing: border-box;
+    background-color: black;
+    color: LightSlateGray;
+    opacity: 0.5;
+    border: none;
+  }
+  #loginBtn {
+    width: 100%;
+    margin: 0 auto;
+  }
+  #newUser {
+    width: 100%;
+    margin: 0 auto;
+  }
+  #loginForm {
+    margin-left: 10%;
+    margin-right: 10%;
+  }
+  #registerBtn {
+    margin-left: 10%;
+    margin-right: 10%;
+    width: 80%;
+  }
+  .social-login {
+    margin-left: 10%;
+    margin-right: 10%;
+    width: 80%;
+    height: 5%;
+    margin-bottom: 2%;
+  }
+  .social-login button {
+    position: relative;
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+    vertical-align: middle;
+    height: 5%;
+    margin-bottom: 2%;
+  }
+  .social-login #facebook i {
+    color: #3234ee;
+    position: relative;
+    height: 80%;
+  }
+  .social-login #google i {
+    color: #eb1515;
+  }
+  #login-break {
+    width: 100%;
+    text-align: center;
+    border-bottom: 1px solid #000;
+    line-height: 0.1em;
+    margin: 10px 0 20px;
+  }
+  #login-break span {
+      opacity: 1;
+      padding:0 10px;
+  }
+  /* End Login Page */
+}

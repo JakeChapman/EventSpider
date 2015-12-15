@@ -1,0 +1,38 @@
+@media only screen and (max-device-width: 480px) {
+  /* Registration Page */
+  i#confirmMatch-email, i#confirmMatch-password {
+    color: green;
+  }
+  i#confirmWrong-email, i#confirmWrong-password {
+    color: red;
+  }
+  #register-form {
+    display: inline-block;
+  }
+  .register-content {
+    height: 100%;
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+    text-align: center;
+  }
+  #confirm-email, #confirm-password {
+    float: right;
+  }
+  #register-form input {
+    margin-bottom: 2%;
+  }
+  #register-button {
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    background-color: LightGray;
+    color: Black;
+    width: 100%;
+    border: none;
+    margin: 0 auto;
+    margin-top: 10%;
+  }
+  /* End Registration Page */
+}
