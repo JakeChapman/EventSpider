@@ -43,7 +43,9 @@ FlowRouter.route('/', {
   action: function(params) {
     /* The key 'content' is now a function */
     ReactLayout.render(MainLayout, {
-      content: <Login />
+      content: <Login/>,
+      sidebar: <Nav/>,
+      footer: <Footer/>
     });
   }
 });
