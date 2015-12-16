@@ -1,197 +1,3 @@
-ul.notifications {
-  position: fixed;
-}
-#mainHeader
-{
-  font-style: normal;
-  text-align: center;
-}
-html {
-  position: relative;
-  top: 0;
-  bottom: 0;
-  height: 100%;
-  width: 100%;
-}
-body .wrapper {
-  padding-top: 20%;
-  height: 100%;
-  position: relative;
-  overflow: hidden;
-  width: 100%;
-}
-#wrapper {
-    padding-top: 20%;
-    padding-left: 0;
-    -webkit-transition: all 0.5s ease;
-    -moz-transition: all 0.5s ease;
-    -o-transition: all 0.5s ease;
-    transition: all 0.5s ease;
-    height: 100%;
-    /*background: Black;*/
-}
-
-#wrapper.toggled {
-  padding-left: 0px;
-}
-
-#sidebar-wrapper {
-    z-index: 1000;
-    position: fixed;
-    left: 250px;
-    width: 0;
-    height: 100%;
-    margin-left: -250px;
-    overflow-y: auto;
-    background: DimGray;
-    -webkit-transition: all 0.5s ease;
-    -moz-transition: all 0.5s ease;
-    -o-transition: all 0.5s ease;
-    transition: all 0.5s ease;
-}
-
-#wrapper.toggled #sidebar-wrapper {
-    width: 250px;
-}
-
-.masterCalendar {
-  height: 100%;
-  width: 100%;
-  position: relative;
-}
-
-.masterCalendar .fc {
-  margin-top: 10px;
-  margin-bottom: 10px;
-  margin-left: 20px;
-  margin-right: 20px;
-  height: 50%;
-  position: relative;
-  overflow: visible;
-}
-
-#page-content-wrapper {
-    width: 100%;
-    position: absolute;
-    height: 100%;
-    display: inline-block;
-    right: 0;
-    top: 0;
-}
-
-#wrapper.toggled #page-content-wrapper {
-    position: absolute;
-}
-
-/* Sidebar Styles */
-
-.sidebar-nav {
-    position: absolute;
-    top: 0;
-    width: 250px;
-    margin: 0;
-    padding: 0;
-    list-style: none;
-}
-
-.sidebar-nav li {
-    text-indent: 20px;
-    line-height: 40px;
-}
-
-.sidebar-nav li a {
-    display: block;
-    text-decoration: none;
-    color: #999999;
-}
-
-.sidebar-nav li a:hover {
-    text-decoration: none;
-    color: #fff;
-    background: rgba(255,255,255,0.2);
-}
-
-.sidebar-nav li a:active,
-.sidebar-nav li a:focus {
-    text-decoration: none;
-}
-
-#profile-picture {
-  /*
-  padding-bottom: 20px;
-  padding-top: 40px;
-  */
-  width: auto;
-  height: auto;
-  margin: 0 auto;
-  vertical-align: middle;
-}
-#profile-info {
-  /*padding-bottom: 20px;
-  padding-top: 50px;
-  */
-  margin: auto;
-  display: block;
-}
-
-#profile-info #p-info {
-  text-align: center;
-  color: white;
-  font-size: 10px;
-  display: block;
-  overflow: auto;
-  padding-bottom: 5px;
-  vertical-align: middle;
-}
-.sidebar-nav > .sidebar-profile {
-    margin: 10 10 10 10;
-    height: 100px;
-    font-size: 18px;
-    line-height: 60px;
-}
-#profile-picture img {
-  display: block;
-  margin: auto;
-  border-radius: 50%;
-  vertical-align: middle;
-}
-.sidebar-nav > .sidebar-profile a {
-    color: #999999;
-}
-
-.sidebar-nav > .sidebar-profile a:hover {
-    color: #fff;
-    background: none;
-}
-
-#test {
-    border-style: solid;
-    border-width: 1px;
-    border-color: black;
-}
-
-#fit-content {
-  margin-top: 10px;
-}
-
-#blocktext {
-    margin-left: 15%;
-    margin-top: 15%;
-    width: 12em;
-}
-
-#border-tp-btm {
-    border-bottom-style: solid;
-    border-bottom-color: black;
-    border-bottom-width: 2px;
-    border-top-style: solid;
-    border-top-color: black;
-    border-top-width: 2px;
-    margin-top: 5%;
-    text-align: center;
-}
-
-  @media only screen and (max-device-width: 480px) {
   ul.notifications {
     position: fixed;
   }
@@ -199,6 +5,27 @@ body .wrapper {
     width: 100%;
     height: 5%;
     position: fixed;
+  }
+  #border-tp-btm {
+      border-bottom-style: solid;
+      border-bottom-color: black;
+      border-bottom-width: 2px;
+      border-top-style: solid;
+      border-top-color: black;
+      border-top-width: 2px;
+      margin-top: 5%;
+      text-align: center;
+  }
+  #blocktext {
+      margin-left: 15%;
+      margin-top: 15%;
+      width: 12em;
+  }
+  #profile-picture img {
+    display: block;
+    margin: auto;
+    border-radius: 50%;
+    vertical-align: middle;
   }
   html {
     position: relative;
@@ -285,4 +112,3 @@ body .wrapper {
   #wrapper.toggled #page-content-wrapper {
       position: absolute;
   }
-}
