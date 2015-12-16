@@ -12,7 +12,6 @@ Router.route('/quiz',function(){
     this.layout('layout');
   }
 });
-*/
 Router.route('/', function() {
   this.render('login');
 });
@@ -36,4 +35,15 @@ Router.route('/topics', function(){
 });
 Router.route('/register', function(){
   this.render('register');
+});
+*/
+
+// Flow Router here down
+FlowRouter.route('/', {
+  action: function(params) {
+    /* The key 'content' is now a function */
+    ReactLayout.render(MainLayout, {
+      content: <Login />
+    });
+  }
 });
