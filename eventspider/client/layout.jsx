@@ -1,6 +1,6 @@
 MainLayout = React.createClass({
   render() {
-    return  <div id="main-content">
+    return  <div className="container" id="main-content">
         <div id="wrapper">
           <div id="sidebar-wrapper">
             {this.props.sidebar}
@@ -10,7 +10,7 @@ MainLayout = React.createClass({
           </div>
         </div>
         <footer>
-          {this.props.footer}        
+          {this.props.footer}
         </footer>
       </div>
   }
