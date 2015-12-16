@@ -1,7 +1,18 @@
 <template name="schoolFind">
     <h4>Find Your School</h4>
-    <input type="text" name="search" value="" id="search">
-    <div id="border-bottom">
+    <!--<span class="glyphicon glyphicon-search"></span><input type="text" name="search" value="Search here..." id="search"> -->
+    <div class="input-group">
+      <div class="input-group-addon">
+        <span class="glyphicon glyphicon-search"></span>
+      </div>
+      <input class="form-control" id="search" name="search" placeholder="Search here..." type="text">
+    </div>
+    <div id="border-tp-btm">
         <h5>Nearby Schools</h5>
     </div>
+    <ul>
+      {{#each schools}}
+        <li>{{name}} by {{author.fullName}}</li>
+      {{/each}}
+    </ul>
 </template>

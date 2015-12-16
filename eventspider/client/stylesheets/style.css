@@ -181,11 +181,18 @@ body .wrapper {
     width: 12em;
 }
 
-#border-bottom {
+#border-tp-btm {
     border-bottom-style: solid;
     border-bottom-color: black;
     border-bottom-width: 2px;
+    border-top-style: solid;
+    border-top-color: black;
+    border-top-width: 2px;
+    margin-top: 5%;
+    text-align: center;
 }
+
+
 
 @media(min-width:768px) {
     #wrapper {
