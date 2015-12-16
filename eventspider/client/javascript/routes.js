@@ -1,6 +1,6 @@
 /*Router.configure({
   layoutTemplate:'layout'
-});*/
+});
 var requireLogin = function() {
   if (!Meteor.user()) {
     //Get All events
@@ -74,3 +74,4 @@ Router.route('/topics', function() {
 Router.route('/register', function() {
   this.render('register');
 });
+*/

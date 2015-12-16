@@ -18,7 +18,6 @@ ecmascript              # Enable ECMAScript2015+ syntax in app code
 
 #autopublish             # Publish all data to the clients (for prototyping)
 #insecure                # Allow all DB writes from clients (for prototyping)
-iron:router
 fourseven:scss
 ixdi:material-design-iconic-font
 twbs:bootstrap
@@ -30,3 +29,6 @@ rzymek:fullcalendar
 gfk:notifications
 ian:accounts-ui-bootstrap-3
 accounts-password
+react
+kadira:flow-router
+kadira:react-layout

@@ -32,7 +32,7 @@ body .wrapper {
 }
 
 #wrapper.toggled {
-    padding-left: 250px;
+  padding-left: 0px;
 }
 
 #sidebar-wrapper {
@@ -81,7 +81,6 @@ body .wrapper {
 
 #wrapper.toggled #page-content-wrapper {
     position: absolute;
-    margin-right: -250px;
 }
 
 /* Sidebar Styles */
@@ -192,40 +191,6 @@ body .wrapper {
     text-align: center;
 }
 
-
-
-@media(min-width:768px) {
-    #wrapper {
-        padding-left: 250px;
-    }
-
-    #wrapper.toggled {
-        padding-left: 0;
-    }
-
-    #sidebar-wrapper {
-        width: 250px;
-    }
-
-    #wrapper.toggled #sidebar-wrapper {
-        width: 0;
-    }
-
-    #page-content-wrapper {
-        position: relative;
-    }
-
-    #wrapper.toggled #page-content-wrapper {
-        position: relative;
-        margin-right: 0;
-    }
-
-    #blocktext {
-        margin-left: 15%;
-        margin-top: 5%;
-        width: 12em;
-    }
-}
   @media only screen and (max-device-width: 480px) {
   ul.notifications {
     position: fixed;
@@ -270,7 +235,7 @@ body .wrapper {
   }
 
   #wrapper.toggled {
-      padding-left: 250px;
+      padding-left: 0px;
   }
 
   #sidebar-wrapper {
@@ -289,7 +254,7 @@ body .wrapper {
   }
 
   #wrapper.toggled #sidebar-wrapper {
-      width: 250px;
+      width: 200px;
   }
 
   .masterCalendar {
@@ -319,6 +284,5 @@ body .wrapper {
 
   #wrapper.toggled #page-content-wrapper {
       position: absolute;
-      margin-right: -250px;
   }
 }

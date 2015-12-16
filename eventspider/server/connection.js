@@ -6,6 +6,8 @@ if (Meteor.isServer) {
     Colleges = new Mongo.Collection("Colleges");
     Schools = new Mongo.Collection("Schools");
 
+    console.log("getting stuff");
+    
     Meteor.publish('events', function() {
       //console.log("Number of Documents on Server: " + Questions.find().count());
       console.log("Number of Events: " +  Events.find().count());
