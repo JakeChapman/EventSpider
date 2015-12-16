@@ -1,6 +1,18 @@
 /*Router.configure({
   layoutTemplate:'layout'
 });*/
+/*
+Router.route('/quiz',function(){
+  // add subscription to wait list
+  this.wait(Meteor.subscribe('questions'));
+  this.wait(Meteor.subscribe('history'));
+
+  if(this.ready()){
+    this.render('quiz');
+    this.layout('layout');
+  }
+});
+*/
 Router.route('/', function() {
   this.render('login');
 });
@@ -9,30 +21,19 @@ Router.route('/masterCalendar', function(){
   this.layout('layout');
 });
 Router.route('/eventsList', function(){
-  this.render('eventsList', {
-    data: function () {return Events.find()}
-  });
-  this.layout('layout');
+  //add subscription to wait list
+  this.wait(Meteor.subscribe('events'));
+
+  if(this.ready()){
+    this.render('eventsList');
+    this.layout("layout");
+  }
 });
-Router.route('/event/:_id', function(){
-  this.render('event', {
-    data: function () {
-      return Events.findOne({_id: this.params._id});
-    }
-  });
-  this.layout('layout');
-});
-Router.route('/schools', function(){
-  this.render('schoolList',{
-    data: function() {
-      return Schools.find()}
-  });
-  this.layout('layout');
-});
+
 Router.route('/topics', function(){
   this.render('topics');
   this.layout('layout');
 });
 Router.route('/register', function(){
   this.render('register');
-})
+});
