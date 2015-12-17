@@ -1,6 +1,38 @@
 Login = React.createClass({
-    render() {
-      return      <div>
+  handleLogin(event) {
+    e.preventDefault();
+    //retrieve the input field values
+    var email = t.find('#userEmail').value;
+    var password = t.find('#userPassword').value;
+
+    //Trim and validate your fields here....
+    email = this.trimInput(email);
+    console.log("Email: " + email);
+    console.log("Password: " + password);
+    Meteor.loginWithPassword(email, password, function(err) {
+      if (!err) {
+        console.log("success");
+        Router.go('/');
+      } else {
+        console.log("error");
+        Notifications.warn('Login Failed', err);
+      }
+    });
+  },
+  handleNewUser(event){
+    console.log("going to registration");
+  },
+
+  trimInput(val) {
+    return val.replace(/^\s*|\s*$/g, "");
+  },
+
+  isValidPassword() {
+
+  },
+
+  render() {
+    return <div>
       <div className="background-image"></div>
       <div className="login" id="login-wrapper">
         <div className="login-content">
@@ -15,9 +47,13 @@ Login = React.createClass({
               Sign in with Twitter
             </button>
           </div>
-          <h2 id="login-break"><span> or </span></h2>
+          <h2 id="login-break">
+            <span>
+              or
+            </span>
+          </h2>
 
-          <form action="action" className="form-group form-signin" id="loginForm">
+          <form action="action" className="form-group form-signin" id="loginForm" onSubmit={this.handleLogin}>
             <div className="input-group">
               <div className="input-group-addon">
                 <span className="glyphicon glyphicon-envelope"></span>
@@ -38,13 +74,13 @@ Login = React.createClass({
             </div>
           </form>
           <div className="btn" id="registerBtn">
-            <button className="btn btn-lg btn-primary btn-block" id="newUser">
+            <button className="btn btn-lg btn-primary btn-block" id="newUser" onClick={this.handleNewUser}>
               <span className="glyphicon glyphicon-user"></span>
               Register New User
             </button>
           </div>
         </div>
       </div>
-      </div>
-    }
+    </div>
+  }
 });
