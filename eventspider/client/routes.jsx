@@ -69,7 +69,8 @@ FlowRouter.route('/', {
     ReactLayout.render(MainLayout, {
       content: <Login/>,
       sidebar: <Nav/>,
-      footer: <Footer/>
+      footer: <Footer/>,
+      header: <Header/>
     });
   }
 });
@@ -82,7 +83,8 @@ FlowRouter.route('/feed', {
     ReactLayout.render(MainLayout, {
       content: <Feed/>,
       sidebar: <Nav/>,
-      footer: <Footer/>
+      footer: <Footer/>,
+      header: <Header/>
     });
   }
 });
