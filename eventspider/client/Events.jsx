@@ -17,11 +17,9 @@ Feed = React.createClass({
   },
   render() {
     return (
-      <div className="events">
-        <ul>
+        <div className="events">
           {this.renderEvents()}
-        </ul>
-      </div>
+        </div>
     );
   }
 });
