@@ -1,15 +1,14 @@
 //Collections
 Events = new Mongo.Collection("Events");
-Colleges = new Mongo.Collection("colleges");
+Colleges = new Mongo.Collection("Colleges");
 
 if (Meteor.isServer) {
 
-    console.log(process.env.MONGO_URL);
-    console.log("Publishing Data");
+//    console.log(process.env.MONGO_URL);
+//    console.log("Publishing Data");
 
     Meteor.publish('events', function() {
       //console.log("Number of Documents on Server: " + Questions.find().count());
-      console.log("Number of Events: " +  Events.find().count());
       events = Events.find({});
 
       if( events ){
@@ -19,11 +18,28 @@ if (Meteor.isServer) {
       return this.ready();
     });
 
+    Meteor.publish('event', function(name) {
+      //console.log("Number of Documents on Server: " + Questions.find().count());
+      event = Events.find({name: name});
+      console.log(event.name)
+      if( event ){
+          return event;
+      }
+
+      return this.ready();
+    });
+
     console.log("Publishing Data: Events done");
 
     Meteor.publish('colleges',function(){
-      console.log("Number of Colleges: " + Colleges.find().count());
-      return Colleges.find();
+      colleges = Colleges.find({});
+
+      console.log(colleges.find().count());
+
+      if(colleges){
+        return colleges;
+      }
+       return this.ready();
     });
 
     console.log("Publishing Data: Events, Colleges done");

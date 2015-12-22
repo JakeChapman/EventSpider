@@ -21,4 +21,16 @@
   }
   .event-content {
   }
+
+  .card {
+    position: relative;
+    margin: 0 0 0 5%;
+    left: 0;
+    width: 90%;
+    -moz-box-shadow: 0 0 5px #18191a;
+    -webkit-box-shadow: 0 0 5px #18191a;
+    box-shadow: 0 0 5px #18191a;
+    background-color: white;
+    margin-top: 2%;
+  }
   /* End Events Page */

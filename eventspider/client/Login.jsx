@@ -12,7 +12,7 @@ Login = React.createClass({
     Meteor.loginWithPassword(email, password, function(err) {
       if (!err) {
         console.log("success");
-        Router.go('/');
+        FlowRouter.go('/');
       } else {
         console.log("error");
         Notifications.warn('Login Failed', err);
@@ -31,7 +31,6 @@ Login = React.createClass({
   isValidPassword() {
 
   },
-
   render() {
     return <div>
       <div className="background-image"></div>

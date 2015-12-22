@@ -19,14 +19,16 @@
     width:100%;
     margin: 0 0 0 0;
     position: fixed;
+    background-color: LightGray;
   }
+  /*
   body .wrapper {
     padding-top: 20%;
     height: 100%;
     position: relative;
     width: 100%;
-  }
-  #wrapper {
+  }*/
+  .wrapper {
       height: 100%;
       width: 100%;
       margin: 0 auto;
@@ -35,7 +37,7 @@
       /*background: Black;*/
   }
 
-  #wrapper.toggled {
+  .wrapper.toggled {
       padding-left: 0px;
   }
 
@@ -54,7 +56,7 @@
       transition: all 0.5s ease;
   }
 
-  #wrapper.toggled #sidebar-wrapper {
+  .wrapper.toggled #sidebar-wrapper {
       width: 200px;
   }
 
