@@ -21,7 +21,7 @@ Login = React.createClass({
   },
   handleNewUser(event){
     console.log("going to registration");
-    FlowRouter.go('/feed');
+    FlowRouter.go('/registration');
   },
 
   trimInput(val) {

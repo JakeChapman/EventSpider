@@ -1,6 +1,6 @@
 //Collections
 Events = new Mongo.Collection("Events");
-Colleges = new Mongo.Collection("colleges");
+Colleges = new Mongo.Collection("Colleges");
 
 if (Meteor.isServer) {
 
@@ -21,7 +21,7 @@ if (Meteor.isServer) {
 
     console.log("Publishing Data: Events done");
 
-    Meteor.publish('colleges',function(){
+    Meteor.publish('colleges', function(){
       console.log("Number of Colleges: " + Colleges.find().count());
       return Colleges.find();
     });
