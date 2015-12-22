@@ -5,10 +5,12 @@ Event = React.createClass({
     end_time: React.PropTypes.string,
     on_campus: React.PropTypes.bool
   },
-
+  expandEvent() {
+    FlowRouter.go('/feed/Meteor')
+  },
   render() {
-    return <div className="event">
-      <div className="event-content">
+    return <div className="card" onClick={this.expandEvent}>
+      <div>
         <h2>{this.props.name}</h2>
       </div>
     </div>
