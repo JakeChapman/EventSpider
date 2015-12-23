@@ -1,35 +1,51 @@
-  /* Events Page */
+1441212
+/* Events Page */
 
-  .events {
-    height: 100%;
-    width: 100%;
-    position: relative;
-    top: 0;
-    overflow: scroll;
-    margin-bottom: 10%;
-  }
-  .event {
-    position: relative;
-    background-color: white;
-    color: LightGray;
-    width: 100%;
-    height: 50%;
-    margin: 0 auto;
-    border-color: black;
-    border-style: inset;
-    float: left;
-  }
-  .event-content {
-  }
+.events {
+  height: 100%;
+  width: 100%;
+  position: relative;
+  top: 0;
+  overflow: scroll;
+  margin-bottom: 10%;
+}
+.event {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  margin: 5% 0 0 0;
+}
+.event-content {}
+.card {
+  position: relative;
+  margin: 0 0 0 5%;
+  width: 90%;
+  -moz-box-shadow: 0 0 5px #18191a;
+  -webkit-box-shadow: 0 0 5px #18191a;
+  box-shadow: 0 0 5px #18191a;
+  background-color: white;
+  margin-top: 2%;
+}
+.full {
+  height: 85%;
+}
+.top-section {
+  position: relative;
+  width: 100%;
+  height: 10%;
+  display: inline-flex;
+}
+#sub-icon {
+  position: relative;
+  width: 25%;
+  height: 100%;
+  border-right-style: solid;
+  border-right-color: black;
+  border-right-width: thin;
+  margin: auto
+}
+.title-section {
+  margin: auto;
+}
 
-  .card {
-    position: relative;
-    margin: 0 0 0 5%;
-    width: 90%;
-    -moz-box-shadow: 0 0 5px #18191a;
-    -webkit-box-shadow: 0 0 5px #18191a;
-    box-shadow: 0 0 5px #18191a;
-    background-color: white;
-    margin-top: 2%;
-  }
-  /* End Events Page */
+/* End Events Page */

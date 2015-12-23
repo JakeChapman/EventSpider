@@ -20,7 +20,7 @@ if (Meteor.isServer) {
 
     Meteor.publish('event', function(key) {
       //console.log("Number of Documents on Server: " + Questions.find().count());
-      event = Events.find({name: key});
+      event = Events.find({title: key});
       if( event ){
           return event;
       }
