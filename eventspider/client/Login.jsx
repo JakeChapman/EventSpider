@@ -12,7 +12,7 @@ Login = React.createClass({
     Meteor.loginWithPassword(email, password, function(err) {
       if (!err) {
         console.log("success");
-        FlowRouter.go('/');
+        Router.go('/');
       } else {
         console.log("error");
         Notifications.warn('Login Failed', err);
@@ -21,7 +21,7 @@ Login = React.createClass({
   },
   handleNewUser(event){
     console.log("going to registration");
-    FlowRouter.go('/feed');
+    FlowRouter.go('/registration');
   },
 
   trimInput(val) {
@@ -31,6 +31,7 @@ Login = React.createClass({
   isValidPassword() {
 
   },
+
   render() {
     return <div>
       <div className="background-image"></div>

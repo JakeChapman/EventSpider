@@ -58,3 +58,17 @@ FlowRouter.route('/feed/:title', {
     });
   }
 });
+
+FlowRouter.route('/registration', {
+  subscriptions: function() {
+    this.register('colleges', Meteor.subscribe('colleges'));
+  },
+  action: function(params) {
+    ReactLayout.render(MainLayout, {
+      content: <Registration/>,
+      sidebar: <Nav/>,
+      footer: <Footer/>,
+      header: <Header/>
+    });
+  }
+});
