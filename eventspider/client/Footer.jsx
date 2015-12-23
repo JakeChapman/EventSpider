@@ -1,7 +1,7 @@
 Footer = React.createClass({
   navClick(event){
     event.preventDefault();
-    $("#wrapper").toggleClass("toggled");
+    $(".wrapper").toggleClass("toggled");
   },
   render() {
     return <nav className="navbar navbar-default navbar-fixed-bottom" id='footer' role="navigation">

@@ -6,13 +6,13 @@ Feed = React.createClass({
   getMeteorData() {
     console.log('getting data');
     return {
-      events: Events.find({}).fetch()
+      events: Events.find({}, {sort: {name: 1}}).fetch()
     };
   },
 
   renderEvents() {
     return this.data.events.map((event) => {
-      return <Event key={event._id} name={event.name} start_time={event.start_time} end_time={event.end_time} on_campus={event.on_campus}/>;
+      return <Event key={event._id} name={event.name} start_time={event.start_time} end_time={event.end_time} on_campus={event.on_campus} isSelected={false}/>;
     });
   },
   render() {
