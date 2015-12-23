@@ -66,12 +66,7 @@ FlowHelpers = {
 FlowRouter.route('/', {
   action: function(params) {
     /* The key 'content' is now a function */
-    ReactLayout.render(MainLayout, {
-      content: <Login/>,
-      sidebar: <Nav/>,
-      footer: <Footer/>,
-      header: <Header/>
-    });
+    ReactLayout.render(Login);
   }
 });
 
@@ -82,6 +77,20 @@ FlowRouter.route('/feed', {
   action: function(params) {
     ReactLayout.render(MainLayout, {
       content: <Feed/>,
+      sidebar: <Nav/>,
+      footer: <Footer/>,
+      header: <Header/>
+    });
+  }
+});
+
+FlowRouter.route('/feed/:name', {
+  subscriptions: function() {
+    this.register('event', Meteor.subscribe('event', params.name));
+  },
+  action: function(params) {
+    ReactLayout.render(MainLayout, {
+      content: <EventShow id={params.name}/>,
       sidebar: <Nav/>,
       footer: <Footer/>,
       header: <Header/>
