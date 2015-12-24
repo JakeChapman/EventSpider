@@ -1,10 +1,7 @@
-$marginTop:5%;
-$display:inline-flex;
-$iconCardMargin:5% 0 5% 0;
-$iconMargin:20%;
-$infoMargin: 5% 5% 5% 5%;
+$marginTop: 5%;
+$display: inline-flex;
+$maxCardHeight: 15%;
 /* Events Page */
-
 .events {
   height: 100%;
   width: 100%;
@@ -17,9 +14,8 @@ $infoMargin: 5% 5% 5% 5%;
   position: relative;
   width: 100%;
   height: 100%;
-  margin: 5% 0 0 0;
+  margin: 5% 0 0;
 }
-.event-content {}
 .card {
   position: relative;
   margin: 0 0 0 5%;
@@ -30,50 +26,39 @@ $infoMargin: 5% 5% 5% 5%;
   background-color: white;
   margin-top: 2%;
 }
-.feed{
+.feed {
   display: $display;
-}
-#feed{
-
+  position: relative;
+  width: 100%;
 }
 .full {
   height: 85%;
 }
-.top-section {
-  position: relative;
-  width: 100%;
-  height: 10%;
-  display: $display;
-}
+.top-section {}
 #sub-icon {
-  position: relative;
-  width: auto;
-  height: 90%;
-  margin: $iconCardMargin;
-  border-right-style: solid;
-  border-right-color: black;
-  border-right-width: thin;
+  margin: 2%;
+  width: 10%;
 }
-#sub-icon i{
-  padding-left: $iconMargin;
-  padding-right: $iconMargin + 10%;
+#sub-icon i {}
+#title-section {}
+#title-location,
+#time-date {
+  margin: 2%;
 }
-#title-section {
-  width: 85%;
-  margin: auto;
+#title-location {
+  width: 70%;
 }
-
-#title-location, #time-date{
-  position: relative;
-  height: 100%;
-  margin: $infoMargin;
+#time-date {
+  width: 20%;
 }
-#time-date{
-  float: right;
+#title-location span,
+#time-date span {
+  display: block;
 }
-#title-location span, #time-date span {
-  display: $display;
+.vertical-line {
+  border-left-style: groove;
+  border-left-width: medium;
+  border-left-color: black;
+  margin: 2% 0 2% 0;
 }
-
-
 /* End Events Page */

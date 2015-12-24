@@ -16,6 +16,7 @@ Event = React.createClass({
     $('.events').transition('fade');
     FlowRouter.go('/feed/' + this.props.title);
   },
+
   render() {
 
     if (this.props.isSelected) {
@@ -38,17 +39,28 @@ Event = React.createClass({
         </div>
       </div>
     } else {
-      return <div className="card feed" onClick={this.expandEvent}>
-        <div id="sub-icon">
-          <i className="zmdi zmdi-run zmdi-hc-3x"/>
-        </div>
-        <div id="title-location">
-          {this.props.title}
-          {this.props.location}
-        </div>
-        <div id="time-date">
-          {this.props.start_time} - {this.props.end_time}
-          {this.props.date}
+      let trimmed_descrip = this.props.descrip.substring(0, 60) + "...";
+
+      return <div className="card" onClick={this.expandEvent}>
+        <div className="feed">
+          <div id="sub-icon">
+            <i className="zmdi zmdi-run zmdi-hc-3x"/>
+          </div>
+          <div className="vertical-line"/>
+          <div id="title-location">
+            {this.props.title}
+            {this.props.location}
+            <div id="short-descrip">
+              {trimmed_descrip}
+            </div>
+          </div>
+          <div className="vertical-line"/>
+          <div id="time-date">
+            {this.props.start_time}
+            -
+            {this.props.end_time}
+            {this.props.date}
+          </div>
         </div>
       </div>
     }
