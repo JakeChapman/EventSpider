@@ -1,4 +1,8 @@
-1441212
+$marginTop:5%;
+$display:inline-flex;
+$iconCardMargin:5% 0 5% 0;
+$iconMargin:20%;
+$infoMargin: 5% 5% 5% 5%;
 /* Events Page */
 
 .events {
@@ -7,7 +11,7 @@
   position: relative;
   top: 0;
   overflow: scroll;
-  margin-bottom: 10%;
+  margin-top: $marginTop;
 }
 .event {
   position: relative;
@@ -26,6 +30,12 @@
   background-color: white;
   margin-top: 2%;
 }
+.feed{
+  display: $display;
+}
+#feed{
+
+}
 .full {
   height: 85%;
 }
@@ -33,19 +43,37 @@
   position: relative;
   width: 100%;
   height: 10%;
-  display: inline-flex;
+  display: $display;
 }
 #sub-icon {
   position: relative;
-  width: 25%;
-  height: 100%;
+  width: auto;
+  height: 90%;
+  margin: $iconCardMargin;
   border-right-style: solid;
   border-right-color: black;
   border-right-width: thin;
-  margin: auto
 }
-.title-section {
+#sub-icon i{
+  padding-left: $iconMargin;
+  padding-right: $iconMargin + 10%;
+}
+#title-section {
+  width: 85%;
   margin: auto;
 }
+
+#title-location, #time-date{
+  position: relative;
+  height: 100%;
+  margin: $infoMargin;
+}
+#time-date{
+  float: right;
+}
+#title-location span, #time-date span {
+  display: $display;
+}
+
 
 /* End Events Page */

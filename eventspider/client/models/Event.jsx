@@ -13,6 +13,7 @@ Event = React.createClass({
   },
   expandEvent(e) {
     e.preventDefault();
+    $('.events').transition('fade');
     FlowRouter.go('/feed/' + this.props.title);
   },
   render() {
@@ -37,9 +38,17 @@ Event = React.createClass({
         </div>
       </div>
     } else {
-      return <div className="card" onClick={this.expandEvent}>
-        <div>
-          <h2>{this.props.title}</h2>
+      return <div className="card feed" onClick={this.expandEvent}>
+        <div id="sub-icon">
+          <i className="zmdi zmdi-run zmdi-hc-3x"/>
+        </div>
+        <div id="title-location">
+          {this.props.title}
+          {this.props.location}
+        </div>
+        <div id="time-date">
+          {this.props.start_time} - {this.props.end_time}
+          {this.props.date}
         </div>
       </div>
     }

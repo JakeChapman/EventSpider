@@ -12,7 +12,7 @@ Feed = React.createClass({
 
   renderEvents() {
     return this.data.events.map((event) => {
-      return <Event key={event._id} title={event.title} start_time={event.start_time} end_time={event.end_time} on_campus={event.on_campus} isSelected={false}/>;
+      return <Event key={event._id} title={event.title} location={event.location} date={event.date} start_time={event.start_time} end_time={event.end_time} on_campus={event.on_campus} isSelected={false}/>;
     });
   },
   render() {

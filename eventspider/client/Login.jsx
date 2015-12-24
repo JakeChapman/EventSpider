@@ -1,18 +1,19 @@
 Login = React.createClass({
   handleLogin(event) {
-    e.preventDefault();
+    console.log('HERE');
+    event.preventDefault();
     //retrieve the input field values
-    var email = t.find('#userEmail').value;
-    var password = t.find('#userPassword').value;
+    var email = $('#userEmail').val();
+    var password = $('#userPassword').val();
 
     //Trim and validate your fields here....
-    email = this.trimInput(email);
     console.log("Email: " + email);
     console.log("Password: " + password);
+    email = this.trimInput(email);
     Meteor.loginWithPassword(email, password, function(err) {
       if (!err) {
         console.log("success");
-        Router.go('/');
+        FlowRouter.go('/feed');
       } else {
         console.log("error");
         Notifications.warn('Login Failed', err);
@@ -54,7 +55,7 @@ Login = React.createClass({
             </span>
           </h2>
 
-          <form action="action" className="form-group form-signin" id="loginForm" onSubmit={this.handleLogin}>
+          <form action="action" className="form-group form-signin" id="loginForm"  onSubmit={this.handleLogin}>
             <div className="input-group">
               <div className="input-group-addon">
                 <span className="glyphicon glyphicon-envelope"></span>
