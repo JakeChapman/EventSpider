@@ -1,6 +1,7 @@
 $marginTop: 5%;
 $display: inline-flex;
-$maxCardHeight: 15%;
+$feedSize:x-small;
+$showSize:small;
 /* Events Page */
 .events {
   height: 100%;
@@ -54,6 +55,15 @@ $maxCardHeight: 15%;
 #title-location span,
 #time-date span {
   display: block;
+  font-size: $feedSize;
+}
+#location{
+  font-style: italic;
+  color: #79726f;
+  font-size: $feedSize;
+}
+#short-descrip{
+  font-size: $showSize;
 }
 .vertical-line {
   border-left-style: groove;

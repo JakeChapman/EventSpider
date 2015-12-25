@@ -49,17 +49,19 @@ Event = React.createClass({
           <div className="vertical-line"/>
           <div id="title-location">
             {this.props.title}
-            {this.props.location}
+            <div id="location">
+              {this.props.location}
+            </div>
             <div id="short-descrip">
               {trimmed_descrip}
             </div>
           </div>
           <div className="vertical-line"/>
           <div id="time-date">
+            {this.props.date}
             {this.props.start_time}
             -
             {this.props.end_time}
-            {this.props.date}
           </div>
         </div>
       </div>

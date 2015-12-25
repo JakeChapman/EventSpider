@@ -22,12 +22,6 @@
       margin-top: 15%;
       width: 12em;
   }
-  #profile-picture img {
-    display: block;
-    margin: auto;
-    border-radius: 50%;
-    vertical-align: middle;
-  }
   html {
     position: relative;
     top: 0;
@@ -79,22 +73,6 @@
 
   .wrapper.toggled #sidebar-wrapper {
       width: 200px;
-  }
-
-  .masterCalendar {
-    height: 100%;
-    width: 100%;
-    position: relative;
-  }
-
-  .masterCalendar .fc {
-    margin-top: 10px;
-    margin-bottom: 10px;
-    margin-left: 20px;
-    margin-right: 20px;
-    height: 50%;
-    position: relative;
-    overflow: visible;
   }
 
   #page-content-wrapper {

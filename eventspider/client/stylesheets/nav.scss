@@ -1,0 +1,38 @@
+$marginSpace:10% 2% 2% 15%;
+$infoSize:x-small;
+/* Sidebar Styles */
+.sidebar-nav {
+  position: absolute;
+  top: 0;
+  width: 250px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+#sidebar-profile {
+  margin: $marginSpace;
+  display: inline-flex;
+  font-size: $infoSize;
+  width: 100%;
+}
+#profile-picture img {
+  border-radius: 75%;
+}
+#profile-picture{
+  margin: 0 5% 0 0;
+}
+#profile-info{
+  position: relative;
+  margin: 10% 0 0 3%;
+  width: 100%;
+  vertical-align: middle;
+}
+#sidebar-links{
+  margin: $marginSpace;
+}
+#sidebar-links a{
+  float: left;
+  clear: left;
+  margin: 0 0 5% 0;
+  color: black;
+}
