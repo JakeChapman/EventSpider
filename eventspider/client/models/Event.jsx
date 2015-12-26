@@ -25,6 +25,7 @@ Event = React.createClass({
           <div id="sub-icon">
             <i className="zmdi zmdi-run zmdi-hc-3x"/>
           </div>
+          <div className="vertical-line"/>
           <div id="title-section">
             {this.props.title}
           </div>
