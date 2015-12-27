@@ -60,11 +60,17 @@ html {
   -webkit-transition: all 0.5s ease;
   -moz-transition: all 0.5s ease;
   -o-transition: all 0.5s ease;
-  transition: all 0.5s ease;
+  transition: all 0.4s linear;
 }
-.wrapper.toggled .sidebar-wrapper {
-  width: 250px;
+.wrapper.toggled #sidebar-wrapper {
+  width: 80%;
 }
+.wrapper.toggled #page-content-wrapper{
+  background-color: black;
+  opacity: 0.5;
+  transition: all  linear;
+}
+
 #page-content-wrapper {
   width: 100%;
   position: relative;

@@ -1,21 +1,34 @@
 MainLayout = React.createClass({
+  mixins: [ReactMeteorData],
+
+  getMeteorData() {
+    return{
+      user: Meteor.user()
+    }
+  },
 
   render() {
-    return  <div id="main-content">
+
+    if(this.data.user){
+      return <div id="main-content">
         <header>
-          {this.props.header}
+          <Header school={this.data.user.profile.school}/>
         </header>
         <div className="wrapper">
           <div id="sidebar-wrapper">
-            {this.props.sidebar}
+            <Nav/>
           </div>
           <div id="page-content-wrapper">
             {this.props.content}
           </div>
         </div>
         <footer>
-          {this.props.footer}
+          <Footer/>
         </footer>
       </div>
+    } else{
+      return <Login/>
+    }
+
   }
 });

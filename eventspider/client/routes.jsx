@@ -24,23 +24,14 @@ FlowHelpers = {
 };
 
 // Flow Router here down
-FlowRouter.route('/', {
-  action: function(params) {
-    /* The key 'content' is now a function */
-    ReactLayout.render(Login);
-  }
-});
 
-FlowRouter.route('/feed', {
+FlowRouter.route('/', {
   subscriptions: function() {
     this.register('events', Meteor.subscribe('events'));
   },
   action: function(params) {
     ReactLayout.render(MainLayout, {
       content: <Feed/>,
-      sidebar: <Nav/>,
-      footer: <Footer/>,
-      header: <Header/>
     });
   }
 });
@@ -52,9 +43,6 @@ FlowRouter.route('/feed/:title', {
   action: function(params) {
     ReactLayout.render(MainLayout, {
       content: <EventShow flag={params.title}/>,
-      sidebar: <Nav/>,
-      footer: <Footer/>,
-      header: <Header/>
     });
   }
 });
@@ -66,9 +54,6 @@ FlowRouter.route('/registration', {
   action: function(params) {
     ReactLayout.render(MainLayout, {
       content: <Registration/>,
-      sidebar: <Nav/>,
-      footer: <Footer/>,
-      header: <Header/>
     });
   }
 });
