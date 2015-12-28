@@ -13,7 +13,7 @@ Login = React.createClass({
     Meteor.loginWithPassword(email, password, function(err) {
       if (!err) {
         console.log("success");
-        FlowRouter.go('/feed');
+        FlowRouter.go('/');
       } else {
         console.log("error");
         Notifications.warn('Login Failed', err);

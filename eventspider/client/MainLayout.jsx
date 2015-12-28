@@ -2,19 +2,28 @@ MainLayout = React.createClass({
   mixins: [ReactMeteorData],
 
   getMeteorData() {
-    return{
-      user: Meteor.user()
-    }
+    return {user: Meteor.user()}
   },
 
   render() {
 
-    if(this.data.user){
+    if (this.data.user) {
+
+      let bgColor = this.data.user.profile.colors.primary;
+
+      let divStyle = {
+        backgroundColor: this.data.user.profile.colors.secondary_one,
+        color: this.data.user.profile.colors.secondary_two
+      };
+
+      console.log(divStyle);
       return <div id="main-content">
         <header>
-          <Header school={this.data.user.profile.school}/>
+          <Header school={this.data.user.profile.school} bgColor={this.data.user.profile.colors.secondary_one} fgColor={this.data.user.profile.colors.secondary_two}/>
         </header>
-        <div className="wrapper">
+        <div className="wrapper" style={{
+          backgroundColor: bgColor
+        }}>
           <div id="sidebar-wrapper">
             <Nav/>
           </div>
@@ -23,10 +32,10 @@ MainLayout = React.createClass({
           </div>
         </div>
         <footer>
-          <Footer/>
+          <Footer bgColor={this.data.user.profile.colors.secondary_one} fgColor={this.data.user.profile.colors.secondary_two}/>
         </footer>
       </div>
-    } else{
+    } else {
       return <Login/>
     }
 
