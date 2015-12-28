@@ -37,6 +37,22 @@ html {
   background-color: LightGray;
 }
 
+#navBtn{
+  position: relative;
+  height: 100%;
+  width: 10%;
+  margin: 3%;
+  font-size: x-large;
+}
+#addBtn{
+  position: relative;
+  height: 100%;
+  width: 10%;
+  margin: 2%;
+  float: right;
+  font-size: x-large;
+}
+
 .wrapper {
   height: 100%;
   width: 100%;
