@@ -3,8 +3,8 @@ Event = React.createClass({
     title: React.PropTypes.string,
     descrip: React.PropTypes.string,
     location: React.PropTypes.string,
-    tags: React.PropTypes.array,
-    categories: React.PropTypes.array,
+    tags: React.PropTypes.object,
+    categories: React.PropTypes.object,
     date: React.PropTypes.string,
     start_time: React.PropTypes.string,
     end_time: React.PropTypes.string,
@@ -15,6 +15,12 @@ Event = React.createClass({
     e.preventDefault();
     $('.events').transition('fade');
     FlowRouter.go('/feed/' + this.props.title);
+  },
+
+  addToCalendar() {
+    alert('Adding to Calendar');
+    $('#calendarAdded').css('color', 'green');
+    $('#calendarAdded').toggleClass('spin')
   },
 
   render() {
@@ -33,8 +39,15 @@ Event = React.createClass({
         <div className="descrip-section">
           {this.props.descrip}
         </div>
+        <div className="save-section">
+          add to
+          <i className="glyphicon glyphicon-calendar" onClick={this.addToCalendar}/>
+          <i className="glyphicon glyphicon-ok-circle" id="calendarAdded"/>
+        </div>
         <div className="info-section">
-          {this.props.location}
+          <i className="zmdi zmdi-pin">
+            {this.props.location}
+          </i>
           {this.props.start_time}
           {this.props.end_time}
         </div>

@@ -62,6 +62,25 @@ $showSize: small;
     letter-spacing: 2px;
   }
 }
+.descrip-section {
+  position: relative;
+  width: 100%;
+  padding: 3%;
+}
+.save-section{
+  position: relative;
+  width: 100%;
+  padding: 3% 3% 3% 35%;
+  i{
+    margin: 0 3% 0 3%;
+    font-size: x-large;
+    transition: all 1s linear;
+  }
+  i.spin{
+    transform: rotate(360deg);
+  }
+}
+
 #sub-icon i {}
 #title-section {}
 #title-location,
