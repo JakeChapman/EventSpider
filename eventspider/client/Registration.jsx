@@ -12,13 +12,16 @@ Registration = React.createClass({
   isSearchable(text) {
     if(text.length > 3){
       return true
+    }
+    else{
+      return false
     };
   },
 
   searchResults(text) {
     if(isSearchable(text)){
       return (
-        
+
       )
     };
   },
@@ -43,7 +46,7 @@ Registration = React.createClass({
 
             <div className="form-group form-inline">
               <label for="college">College</label>
-              <input type="text" className="form-control" id="lname" placeholder="Enter College" />
+              <input type="text" className="form-control" id="collegeSearch" placeholder="Enter College" />
             </div>
 
             <div className="form-group">

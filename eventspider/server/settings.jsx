@@ -41,7 +41,6 @@ if (Meteor.isServer) {
       }
 
       return this.ready();
->>>>>>> 3c5da03db94d1c2de16d1594b803b0f9281ee9e1
     });
 
     console.log("Publishing Data: Events, Colleges done");
