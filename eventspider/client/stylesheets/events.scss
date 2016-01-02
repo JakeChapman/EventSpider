@@ -1,0 +1,96 @@
+$marginTop: 5%;
+$display: inline-flex;
+$feedSize: x-small;
+$showSize: small;
+/* Events Page */
+.events {
+  height: 100%;
+  width: 100%;
+  position: relative;
+  top: 0;
+  overflow: scroll;
+  margin-top: $marginTop;
+}
+.event {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  margin: 5% 0 0;
+}
+.card {
+  position: relative;
+  margin: 0 0 0 5%;
+  width: 90%;
+  -moz-box-shadow: 0 0 5px #18191a;
+  -webkit-box-shadow: 0 0 5px #18191a;
+  box-shadow: 0 0 5px #18191a;
+  background-color: white;
+  margin-top: 2%;
+}
+.feed {
+  display: $display;
+  position: relative;
+  width: 100%;
+}
+.full {
+  height: 85%;
+}
+.top-section {
+  display: $display;
+}
+#sub-icon {
+  margin: 2%;
+  width: 10%;
+}
+.top-section {
+  position: relative;
+  width: 100%;
+  height: 10%;
+  #sub-icon {
+    margin: 2%;
+    width: 8%;
+    align-items: center;
+  }
+  .vertical-line {
+    margin: 1%;
+  }
+  #title-section {
+    font-size: x-large;
+    width: 80%;
+    text-align: center;
+    padding-top: 3%;
+    letter-spacing: 2px;
+  }
+}
+#sub-icon i {}
+#title-section {}
+#title-location,
+#time-date {
+  margin: 2%;
+}
+#title-location {
+  width: 70%;
+}
+#time-date {
+  width: 20%;
+}
+#title-location span,
+#time-date span {
+  display: block;
+  font-size: $feedSize;
+}
+#location {
+  font-style: italic;
+  color: #79726f;
+  font-size: $feedSize;
+}
+#short-descrip {
+  font-size: $showSize;
+}
+.vertical-line {
+  border-left-style: groove;
+  border-left-width: medium;
+  border-left-color: black;
+  margin: 2% 0;
+}
+/* End Events Page */

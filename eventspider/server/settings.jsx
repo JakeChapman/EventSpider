@@ -18,10 +18,9 @@ if (Meteor.isServer) {
       return this.ready();
     });
 
-    Meteor.publish('event', function(name) {
+    Meteor.publish('event', function(key) {
       //console.log("Number of Documents on Server: " + Questions.find().count());
-      event = Events.find({name: name});
-      console.log(event.name)
+      event = Events.find({title: key});
       if( event ){
           return event;
       }
@@ -34,7 +33,7 @@ if (Meteor.isServer) {
     Meteor.publish('colleges',function(){
       colleges = Colleges.find({});
 
-      console.log("Number of Events: " +  colleges.find().count());
+      console.log("Number of Colleges: " +  colleges.count());
 
       if( colleges ){
         return colleges;
