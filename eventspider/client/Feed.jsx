@@ -10,6 +10,11 @@ Feed = React.createClass({
     };
   },
 
+  navSwipe(event){
+    event.preventDefault();
+    $(".wrapper").toggleClass("toggled");
+  },
+
   renderEvents() {
     return this.data.events.map((event) => {
       return <Event key={event._id} title={event.title} location={event.location} date={event.date} descrip={event.description} start_time={event.start_time} end_time={event.end_time} on_campus={event.on_campus} isSelected={false}/>;
@@ -17,7 +22,7 @@ Feed = React.createClass({
   },
   render() {
     return (
-        <div className="events">
+        <div className="events" onSwipe={this.navSwipe}>
           {this.renderEvents()}
         </div>
     );
