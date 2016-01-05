@@ -52,8 +52,8 @@ FlowRouter.route('/registration', {
     this.register('colleges', Meteor.subscribe('colleges'));
   },
   action: function(params) {
-    ReactLayout.render(MainLayout, {
-      content: <Registration/>,
-    });
+    ReactLayout.render(
+      Registration
+    );
   }
 });
