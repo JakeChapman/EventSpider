@@ -5,12 +5,14 @@ Feed = React.createClass({
   // Loads items from the Tasks collection and puts them on this.data.tasks
   getMeteorData() {
     console.log('getting data');
-    return {
-      events: Events.find({}, {sort: {title: 1}}).fetch()
-    };
+    return {events: Events.find({}, {
+        sort: {
+          title: 1
+        }
+      }).fetch()};
   },
 
-  navSwipe(event){
+  navSwipe(event) {
     event.preventDefault();
     $(".wrapper").toggleClass("toggled");
   },
@@ -21,10 +23,11 @@ Feed = React.createClass({
     });
   },
   render() {
+
     return (
-        <div className="events" onSwipe={this.navSwipe}>
-          {this.renderEvents()}
-        </div>
+      <div className="events">
+        {this.renderEvents()}
+      </div>
     );
   }
 });

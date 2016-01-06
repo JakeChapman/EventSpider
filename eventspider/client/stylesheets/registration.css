@@ -1,5 +1,5 @@
-@media only screen and (max-device-width: 480px) {
   /* Registration Page */
+
   i#confirmMatch-email, i#confirmMatch-password {
     color: green;
   }
@@ -35,4 +35,3 @@
     margin-top: 10%;
   }
   /* End Registration Page */
-}

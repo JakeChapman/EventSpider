@@ -95,3 +95,14 @@ html {
   right: 0;
   top: 0;
 }
+.main-appear.main-appear-active {
+  opacity: 1;
+  transition: opacity .5s ease-in;
+}
+.main-leave{
+  opacity: 0.1;
+}
+.main-leave.main-leave-active{
+  opacity: 0.01;
+  transition:  2s ease-out;
+}
