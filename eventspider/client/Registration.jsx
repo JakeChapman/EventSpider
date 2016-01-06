@@ -23,10 +23,16 @@ Registration = React.createClass({
   },
 
   render() {
+    var collegeList = getMeteorData();
+
+    "keyup #collegeSearch": _.throttle(function(e) {
+        var text = $(e.target).val().trim();
+      }, 200);
+
     return (
       <div className="registration" id="registration-wrapper">
         <div className="register-content">
-
+          <h2 id="register-header">Create an account</h2>
           <form id="register-form" role="form">
 
             <div className="form-group form-inline">
@@ -41,7 +47,7 @@ Registration = React.createClass({
 
             <div className="form-group form-inline">
               <label htmlFor="college">College</label>
-              <input type="text" className="form-control" id="collegeSearch" placeholder="Enter College" />
+              <select className="form-control" id="collegeSearch" placeholder="Enter College" />
             </div>
 
             <div className="form-group">

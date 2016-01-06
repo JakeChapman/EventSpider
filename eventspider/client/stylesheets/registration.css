@@ -8,8 +8,11 @@
   #register-form {
     margin-left: 10%;
     margin-right: 10%;
-    background-color: blue;
   }
+  #register-header {
+    padding-bottom: 10%;
+  }
+
   .register-content {
     height: 100%;
     width: 100%;
