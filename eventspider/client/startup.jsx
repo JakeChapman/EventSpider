@@ -2,8 +2,6 @@
 Events = new Mongo.Collection("Events");
 Colleges = new Mongo.Collection("Colleges");
 
-
-
 if (Meteor.isClient) {
   // This code is executed on the client only
   Accounts.config({

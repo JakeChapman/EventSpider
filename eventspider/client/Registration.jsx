@@ -4,52 +4,62 @@ Registration = React.createClass({
 
   getMeteorData() {
     console.log('getting data');
-    return {colleges: Colleges.find({}).fetch()};
+    return {colleges: Colleges.find({}, {field: {name: 1, colors: 0, state: 0}}).fetch()};
   },
 
-  isSearchable(text) {
-    if (text.length > 3) {
-      return true
-    };
-  },
+  // isSearchable(text) {
+  //   if (text.length > 3) {
+  //     return true
+  //   }
+  //   else{
+  //     return false
+  //   };
+  // },
 
-  searchResults(text) {
-    if (isSearchable(text)) {
-      return true;
-    };
+  // searchResults(text) {
+  //   if (isSearchable(text)) {
+  //     return true;
+  //   };
+  // },
+
+  getColleges(){
+    //if ($("#collegeSearch").val().length() > 3) {
+      //  TODO: Loop through query and return top 5 colleges (sorted)
+      //      appending them as options to the select tag using .append()
+      $("#collegeSearch").val(this.data.colleges[0].name);
+  //  };
   },
 
   render() {
     return (
-      <div className="registration">
-
+      <div className="registration" id="registration-wrapper">
         <div className="register-content">
-
+          <h2 id="register-header">Create an account</h2>
           <form id="register-form" role="form">
 
             <div className="form-group form-inline">
-              <label for="fname">First Name</label>
+              <label htmlFor="fname">First Name</label>
               <input type="text" className="form-control" id="fname" placeholder="Enter First Name"/>
             </div>
 
             <div className="form-group form-inline">
-              <label for="lname">Last Name</label>
+              <label htmlFor="lname">Last Name</label>
               <input type="text" className="form-control" id="lname" placeholder="Enter Last Name"/>
             </div>
 
             <div className="form-group form-inline">
-              <label for="college">College</label>
-              <input type="text" className="form-control" id="lname" placeholder="Enter College"/>
+              <label htmlFor="college">College</label>
+              <input type="text" className="form-control" id="collegeSearch" placeholder="Enter College" onKeyUp={this.getColleges} />
             </div>
 
             <div className="form-group">
-              <label for="email" className="form-inline">Email</label>
+              <label htmlFor="email" className="form-inline">Email</label>
               <input type="email" className="form-control form-inline" id="email" placeholder="Enter Email"/>
               <input type="email" className="form-control" id="confirm-email" placeholder="Confirm Email"/>
             </div>
 
             <div className="form-group" id="passwordFields">
-              <label for="password" className="form-inline">Password</label>
+              <label htmlFor="password" className="form-inline">Password</label>
               <input type="password" className="form-control form-inline" id="password" placeholder="Enter Password"/>
               <input type="password" className="form-control col-md-10" id="confirm-password" placeholder="Confirm Password"/>
             </div>
