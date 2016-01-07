@@ -4,31 +4,33 @@ Registration = React.createClass({
 
   getMeteorData() {
     console.log('getting data');
-    return {colleges: Colleges.find({}).fetch()};
+    return {colleges: Colleges.find({}, {field: {name: 1, colors: 0, state: 0}}).fetch()};
   },
 
-  isSearchable(text) {
-    if (text.length > 3) {
-      return true
-    }
-    else{
-      return false
-    };
-  },
+  // isSearchable(text) {
+  //   if (text.length > 3) {
+  //     return true
+  //   }
+  //   else{
+  //     return false
+  //   };
+  // },
 
-  searchResults(text) {
-    if (isSearchable(text)) {
-      return true;
-    };
+  // searchResults(text) {
+  //   if (isSearchable(text)) {
+  //     return true;
+  //   };
+  // },
+
+  getColleges(){
+    //if ($("#collegeSearch").val().length() > 3) {
+      //  TODO: Loop through query and return top 5 colleges (sorted)
+      //      appending them as options to the select tag using .append()
+      $("#collegeSearch").val(this.data.colleges[0].name);
+  //  };
   },
 
   render() {
-    var collegeList = getMeteorData();
-
-    "keyup #collegeSearch": _.throttle(function(e) {
-        var text = $(e.target).val().trim();
-      }, 200);
-
     return (
       <div className="registration" id="registration-wrapper">
         <div className="register-content">
@@ -47,7 +49,7 @@ Registration = React.createClass({
 
             <div className="form-group form-inline">
               <label htmlFor="college">College</label>
-              <select className="form-control" id="collegeSearch" placeholder="Enter College" />
+              <input type="text" className="form-control" id="collegeSearch" placeholder="Enter College" onKeyUp={this.getColleges} />
             </div>
 
             <div className="form-group">

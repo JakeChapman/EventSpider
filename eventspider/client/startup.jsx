@@ -1,6 +1,6 @@
 //Collections
 Events = new Mongo.Collection("Events");
-Colleges = new Mongo.Collection("colleges");
+Colleges = new Mongo.Collection("Colleges");
 
 
 if (Meteor.isClient) {
