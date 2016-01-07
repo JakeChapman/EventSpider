@@ -3,6 +3,12 @@ Footer = React.createClass({
     bgColor: React.PropTypes.string.isRequired,
     fgColor: React.PropTypes.string.isRequired
   },
+
+  selectAddType(e){
+    console.log("Adding stuff");
+    $(".options").toggleClass("selectType");
+  },
+
   navClick(event){
     event.preventDefault();
     $(".wrapper").toggleClass("toggled");
@@ -13,9 +19,9 @@ Footer = React.createClass({
       color: this.props.fgColor
     }
     return <nav className="navbar navbar-default navbar-fixed-bottom" id='footer' role="navigation" style={divStyle}>
-      <div className="glyphicon glyphicon-menu-hamburger" id="navBtn" onClick={this.navClick}>
+      <div className="glyphicon glyphicon-menu-hamburger navBtn" onClick={this.navClick}>
       </div>
-      <div className="glyphicon glyphicon-plus" id="addBtn"></div>
+      <div className="glyphicon glyphicon-plus" id="addBtn" onClick={this.selectAddType}></div>
     </nav>
   }
 });

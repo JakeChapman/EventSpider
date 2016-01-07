@@ -4,7 +4,14 @@ MainLayout = React.createClass({
   mixins: [ReactMeteorData],
 
   getInitialState() {
-    return {x: 0, y: 0, initialX: 0, initialY: 0, dragging: "none"}
+    return {
+      x: 0,
+      y: 0,
+      initialX: 0,
+      initialY: 0,
+      dragging: "none",
+      toggled: false
+    }
   },
 
   getMeteorData() {
@@ -16,18 +23,33 @@ MainLayout = React.createClass({
   },
   moveItem(e) {
     swipeStatus = (e.touches[0].pageX - this.state.initialX);
-    if (swipeStatus > 0) {
-      $(".wrapper").toggleClass("toggled");
+    if (swipeStatus > 0 && swipeStatus <= 250) {
+      this.setState({x: swipeStatus, dragging: "left", toggled: true});
     } else if (swipeStatus < 0) {
+      this.setState({dragging: "right"});
       FlowRouter.go('/registration');
     }
-    alert(deltaX);
   },
   moveEnd(e) {
-    this.setState({x: 0, y: 0, dragging: "all 0.5s ease"});
+    if (this.state.dragging === "left") {
+      if (this.state.x < 100) {
+        this.setState({x: 0, toggled: false});
+      } else {
+        $(".wrapper").toggleClass("toggled");
+        this.setState({x: 250, toggled: true});
+      }
+    }
+  },
+
+  closeNav(e) {
+    if (this.state.toggled) {
+      $(".wrapper").toggleClass("toggled");
+      this.setState({x: 0, toggled: false});
+    }
   },
 
   render() {
+
     if (this.data.user) {
 
       let bgColor = this.data.user.profile.colors.primary;
@@ -37,7 +59,21 @@ MainLayout = React.createClass({
         color: this.data.user.profile.colors.secondary_two
       };
 
-      console.log(divStyle);
+      let navStyle = {};
+
+      if(this.state.toggled){
+        let navStyle = {
+          backgroundColor: this.data.user.profile.colors.secondary_one,
+          color: this.data.user.profile.colors.secondary_two,
+          width: this.state.x + "px"
+        };
+      }else {
+        let navStyle = {
+          backgroundColor: this.data.user.profile.colors.secondary_one,
+          color: this.data.user.profile.colors.secondary_two
+        };
+      };
+
       return <div id="main-content">
         <header>
           <Header school={this.data.user.profile.school} bgColor={this.data.user.profile.colors.secondary_one} fgColor={this.data.user.profile.colors.secondary_two}/>
@@ -45,8 +81,8 @@ MainLayout = React.createClass({
         <ReactCSSTransitionGroup transitionName="main" transitionEnterTimeout={500} transitionLeaveTimeout={300}>
           <div className="wrapper" style={{
             backgroundColor: bgColor
-          }} onTouchStart={this.moveInit} onTouchMove={this.moveItem} onTouchEnd={this.moveEnd}>
-            <div id="sidebar-wrapper">
+          }} onTouchStart={this.moveInit} onTouchMove={this.moveItem} onTouchEnd={this.moveEnd} onClick={this.closeNav}>
+            <div id="sidebar-wrapper" style={navStyle}>
               <Nav/>
             </div>
             <div id="page-content-wrapper">
@@ -57,6 +93,11 @@ MainLayout = React.createClass({
         <footer>
           <Footer bgColor={this.data.user.profile.colors.secondary_one} fgColor={this.data.user.profile.colors.secondary_two}/>
         </footer>
+        <div className="options">
+          Add events
+          <br/>
+          Add Org
+        </div>
       </div>
     } else {
       return <Login/>
