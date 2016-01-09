@@ -47,6 +47,17 @@ FlowRouter.route('/feed/:title', {
   }
 });
 
+FlowRouter.route('/myOrg', {
+  subscriptions: function() {
+    //this.register('colleges', Meteor.subscribe('colleges'));
+  },
+  action: function(params) {
+    ReactLayout.render(MainLayout, {
+      content: <Organizations/>
+    });
+  }
+});
+
 FlowRouter.route('/registration', {
   subscriptions: function() {
     this.register('colleges', Meteor.subscribe('colleges'));

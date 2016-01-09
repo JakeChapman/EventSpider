@@ -91,7 +91,7 @@ MainLayout = React.createClass({
             backgroundColor: bgColor
           }} onTouchStart={this.moveInit} onTouchMove={this.moveItem} onTouchEnd={this.moveEnd} onClick={this.closeNav}>
             <div id="sidebar-wrapper" style={navStyle}>
-              <Nav/>
+              <Nav userRole={this.data.user.profile.role}/>
             </div>
             <div id="page-content-wrapper">
               {this.props.content}

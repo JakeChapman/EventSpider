@@ -1,4 +1,15 @@
 Nav = React.createClass({
+  propTpes: {
+    userRole: React.PropTypes.string.isRequired
+  },
+
+  componentDidMount() {
+    console.log("User Role: " + this.props.userRole);
+    if (this.props.userRole === "OrgOwner") {
+      $("<a href='/myOrg'>My Organizations</a>").insertAfter("#accountSection");
+    }
+  },
+
   render() {
     return <div id="sidebar-nav">
       <div id="sidebar-profile">
@@ -14,7 +25,7 @@ Nav = React.createClass({
         <a href='/feed'>Event Feed</a>
         <a href='/feed'>Org/Event Seach</a>
         <a href='/feed'>Saved Events</a>
-        <a href='/feed'>My Profile</a>
+        <a href='/feed' id="accountSection">My Profile</a>
         <a href='/feed'>Points & Rewards</a>
         <a href='/feed'>Settings</a>
       </div>
