@@ -2,32 +2,77 @@ Registration = React.createClass({
 
   mixins: [ReactMeteorData],
 
-  getMeteorData() {
-    console.log('getting data');
-    return {colleges: Colleges.find({}, {field: {name: 1, colors: 0, state: 0}}).fetch()};
+  getInitialState() {
+    return {college: ""}
   },
 
-  // isSearchable(text) {
-  //   if (text.length > 3) {
-  //     return true
-  //   }
-  //   else{
-  //     return false
-  //   };
-  // },
+  getMeteorData() {
+    console.log('getting data');
+    console.log("Query Parameter: " + this.state.college);
+    return {
+      colleges: Colleges.find({
+        name: {
+          $regex: "\.*" + this.state.college
+        }
+      }, {
+        field: {
+          name: 1,
+          colors: 0,
+          state: 0
+        }
+      }).fetch()
+    };
+  },
 
-  // searchResults(text) {
-  //   if (isSearchable(text)) {
-  //     return true;
-  //   };
-  // },
-
-  getColleges(){
+  getColleges() {
     //if ($("#collegeSearch").val().length() > 3) {
-      //  TODO: Loop through query and return top 5 colleges (sorted)
-      //      appending them as options to the select tag using .append()
-      $("#collegeSearch").val(this.data.colleges[0].name);
-  //  };
+    //  TODO: Loop through query and return top 5 colleges (sorted)
+    //      appending them as options to the select tag using .append()
+    //$("#collegeSearch").val(this.data.colleges[0].name);
+    //  };
+    var collegeList = $("#collegelist");
+    console.log($("#collegeSearch").val());
+    this.setState({college: $("#collegeSearch").val()});
+    console.log("Adding: " + this.data.colleges);
+    console.log(this.state.college);
+    //clear the dropdown list
+    collegeList.empty();
+    $.each(this.data.colleges, function(key, val) {
+      collegeList.append($("<option></option>").val(val.name).html(val.state));
+    });
+
+  },
+
+  registerUser() {
+    var email = $("#email").val();
+    var name = $("#fname").val() + $('#lname').val();
+    var password = $("#password").val();
+    var college = Colleges.findOne({name: $("#collegeSearch").val()});
+    var profile = {
+      school: college.name,
+      colors: {
+        primary: college.colors.primary,
+        secondary_one: college.colors.secondary_one,
+        secondary_two: college.colors.secondary_two
+      },
+      role: "student"
+    };
+
+    var userObject = {
+      username: name,
+      email: email,
+      password: password,
+      profile: profile
+    };
+
+    Accounts.createUser(userObject, function(err) {
+      if (!err) {
+        console.log("Here");
+        FlowRouter.go("/");
+      } else {
+        Notifications.warn("Registration Failed", err);
+      }
+    });
   },
 
   render() {
@@ -49,7 +94,8 @@ Registration = React.createClass({
 
             <div className="form-group form-inline">
               <label htmlFor="college">College</label>
-              <input type="text" className="form-control" id="collegeSearch" placeholder="Enter College" onKeyUp={this.getColleges} />
+              <input type="text" className="form-control" id="collegeSearch" placeholder="Enter College" list="collegelist" onKeyUp={this.getColleges}/>
+              <datalist id='collegelist'></datalist>
             </div>
 
             <div className="form-group">
@@ -65,12 +111,12 @@ Registration = React.createClass({
             </div>
 
             <div className="form-group" id="register-button-container">
-              <input type="submit" value="Register" className="btn btn-lg btn-primary" id="register-button"/>
+              <input type="submit" value="Register" className="btn btn-lg btn-primary" id="register-button" onClick={this.registerUser}/>
             </div>
 
           </form>
         </div>
       </div>
-    );
+    )
   }
 });

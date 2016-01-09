@@ -27,16 +27,24 @@ MainLayout = React.createClass({
       this.setState({x: swipeStatus, dragging: "left", toggled: true});
     } else if (swipeStatus < 0) {
       this.setState({dragging: "right"});
-      FlowRouter.go('/registration');
+      //FlowRouter.go('/registration');
     }
   },
   moveEnd(e) {
+    console.log(this.state.toggled);
     if (this.state.dragging === "left") {
       if (this.state.x < 100) {
         this.setState({x: 0, toggled: false});
       } else {
         $(".wrapper").toggleClass("toggled");
         this.setState({x: 250, toggled: true});
+      }
+    }else if (this.state.dragging === "right") {
+      if (this.state.toggled) {
+        $(".wrapper").toggleClass("toggled");
+        this.setState({x: 0, toggled: false});
+      }else{
+        FlowRouter.go('/registration');
       }
     }
   },
@@ -93,11 +101,7 @@ MainLayout = React.createClass({
         <footer>
           <Footer bgColor={this.data.user.profile.colors.secondary_one} fgColor={this.data.user.profile.colors.secondary_two}/>
         </footer>
-        <div className="options">
-          Add events
-          <br/>
-          Add Org
-        </div>
+
       </div>
     } else {
       return <Login/>

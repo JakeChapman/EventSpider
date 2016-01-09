@@ -96,12 +96,14 @@ html {
   top: 0;
 }
 .options{
-  z-index: 0;
-  position: fixed;
+  z-index: 1000;
+  position: absolute;
+  top: 85%;
   width: 50%;
-  padding-left: 25%;
-  background-color: blue;
-  color: white;
+  margin-left: 50%;
+  background-color: white;
+  color: black;
+  transition: all 0.4s linear;
 }
 .options.selectType{
   z-index: 10000;
