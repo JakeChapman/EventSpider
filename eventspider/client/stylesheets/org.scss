@@ -1,29 +1,39 @@
 .myOrg-wrapper {
   .org-title {
     position: relative;
-    margin: 10% 0 0;
     width: 100%;
     text-align: center;
     font-size: x-large;
     font-weight: bolder;
   }
-  .card {
-    display: inline-flex;
-    #org-picture {
-      margin: 0 5%;
-      width: 15%;
-      img {
-        margin: 3% 0;
-        border-radius: 75%;
-      }
+}
+.org {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  margin: 5% 0 0;
+}
+.card {
+  #org-picture {
+    margin: 0 5%;
+    width: 15%;
+    text-align: center;
+    img {
+      margin: 3% 0;
+      border-radius: 75%;
     }
-    .org-name{
-      width: 80%;
-      margin: 5% 5% 5% 15%;
-      vertical-align: middle;
-      position: relative;
-      font-size: large;
-      font-weight: bold;
-    }
+  }
+  .org-name {
+    margin: 5% 5% 5% 15%;
+    vertical-align: middle;
+    position: relative;
+    font-size: large;
+    font-weight: bold;
+  }
+}
+
+.full{
+  #org-picture{
+    align-items: center;
   }
 }

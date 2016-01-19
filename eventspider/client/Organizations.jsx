@@ -13,7 +13,7 @@ Orgs = React.createClass({
 
   renderOrgs() {
     return this.data.organizations.map((org) => {
-      return <Org key={org._id} name={org.name} descrip={org.description} category={org.category} link={org.link} isSelected={false}/>;
+      return <Org key={org._id} name={org.name} descrip={org.description} category={org.category} link={org.link} isSelected={false} status={"PENDING"}/>;
     });
   },
 

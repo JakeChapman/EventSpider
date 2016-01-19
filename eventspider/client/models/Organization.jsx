@@ -16,8 +16,11 @@ Org = React.createClass({
   render() {
     if(this.props.isSelected){
     return <div className="card full">
+      <div id="orgStatus">
+        {this.props.status}
+      </div>
       <div id="org-picture">
-        <img src="got.jpg" height="50px" width="50px"/>
+        <img src="/got.jpg" height="50px" width="50px"/>
       </div>
       <div className="org-name" onClick={this.orgClick}>
         {this.props.name}
