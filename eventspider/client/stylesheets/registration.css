@@ -28,13 +28,9 @@
     margin: 0 auto;
     position: relative;
     text-align: center;
-    padding-top: 5%;
+    padding-top: 1.5%;
     padding-bottom: 10%;
     color: white;
-  }
-
-  .registration {
-
   }
 
   #email, #password {

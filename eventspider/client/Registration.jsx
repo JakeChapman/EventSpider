@@ -65,6 +65,7 @@ Registration = React.createClass({
       profile: profile
     };
 
+
     Accounts.createUser(userObject, function(err) {
       if (!err) {
         console.log("Here");
