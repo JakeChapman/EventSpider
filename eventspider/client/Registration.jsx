@@ -76,8 +76,8 @@ Registration = React.createClass({
   },
 
   render() {
-    return (
-      <div className="registration" id="registration-wrapper">
+    return ( <div>
+      <div className="background-image"></div>
         <div className="register-content">
           <h2 id="register-header">Create an account</h2>
           <form id="register-form" role="form">
@@ -111,7 +111,9 @@ Registration = React.createClass({
             </div>
 
             <div className="form-group" id="register-button-container">
-              <input type="submit" value="Register" className="btn btn-lg btn-primary" id="register-button" onClick={this.registerUser}/>
+              <button className="btn btn-lg btn-primary btn-block" id="register-button" onClick={this.registerUser}>
+                Register
+              </button>
             </div>
 
           </form>
