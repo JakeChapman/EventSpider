@@ -10,6 +10,7 @@ Login = React.createClass({
     console.log("Email: " + email);
     console.log("Password: " + password);
     email = this.trimInput(email);
+    console.log(email);
     Meteor.loginWithPassword(email, password, function(err) {
       if (!err) {
         console.log("success");
