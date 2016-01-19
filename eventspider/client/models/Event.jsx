@@ -20,38 +20,56 @@ Event = React.createClass({
   addToCalendar() {
     alert('Adding to Calendar');
     $('#calendarAdded').css('color', 'green');
+    $('#calendarAdded').css('visibility', 'visible');
     $('#calendarAdded').toggleClass('spin')
   },
 
   render() {
 
     if (this.props.isSelected) {
-      return <div className="card full">
-        <div className="top-section">
-          <div id="sub-icon">
-            <i className="zmdi zmdi-run zmdi-hc-3x"/>
+      return (
+        <div className="card full">
+          <div className="top-section">
+            <div id="sub-icon">
+              <i className="zmdi zmdi-run zmdi-hc-3x"/>
+            </div>
+            <div className="vertical-line"/>
+            <div id="title-section">
+              {this.props.title}
+            </div>
           </div>
-          <div className="vertical-line"/>
-          <div id="title-section">
-            {this.props.title}
+          <div className="descrip-section">
+            {this.props.descrip}
+          </div>
+          <div className="save-section">
+            add to
+            <i className="glyphicon glyphicon-calendar" onClick={this.addToCalendar}/>
+            <i className="glyphicon glyphicon-ok-circle" id="calendarAdded"/>
+          </div>
+          <div className="info-section">
+            <div id="location-full">
+              <i className="zmdi zmdi-pin"/>
+              {this.props.location}
+            </div>
+            <div id="time-full">
+              <i className="zmdi zmdi-time"/>
+              {this.props.start_time}
+              -
+              {this.props.end_time}
+            </div>
+          </div>
+          <div className="img-section">
+            <img src="/got.jpg" height="75px" width="75px" className="img-thumbnail"/>
+          </div>
+          <div className="org-section">
+            Host by: TODO ADD ORG
+          </div>
+          <div className="social-section">
+            <i className="zmdi zmdi-facebook-box zmdi-hc-2x" id="facebook-full"></i>
+            <i className="zmdi zmdi-google-plus zmdi-hc-2x" id="google-full"></i>
           </div>
         </div>
-        <div className="descrip-section">
-          {this.props.descrip}
-        </div>
-        <div className="save-section">
-          add to
-          <i className="glyphicon glyphicon-calendar" onClick={this.addToCalendar}/>
-          <i className="glyphicon glyphicon-ok-circle" id="calendarAdded"/>
-        </div>
-        <div className="info-section">
-          <i className="zmdi zmdi-pin">
-            {this.props.location}
-          </i>
-          {this.props.start_time}
-          {this.props.end_time}
-        </div>
-      </div>
+      )
     } else {
       let trimmed_descrip = this.props.descrip.substring(0, 60) + "...";
 

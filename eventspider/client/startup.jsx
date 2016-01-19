@@ -1,6 +1,7 @@
 //Collections
 Events = new Mongo.Collection("Events");
 Colleges = new Mongo.Collection("Colleges");
+Organizations = new Mongo.Collection("Organizations");
 
 if (Meteor.isClient) {
   // This code is executed on the client only

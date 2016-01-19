@@ -34,54 +34,100 @@ $showSize: small;
 }
 .full {
   height: 85%;
-}
-.top-section {
-  display: $display;
-}
-#sub-icon {
-  margin: 2%;
-  width: 10%;
-}
-.top-section {
-  position: relative;
-  width: 100%;
-  height: 10%;
   #sub-icon {
     margin: 2%;
-    width: 8%;
-    align-items: center;
+    width: 10%;
   }
-  .vertical-line {
-    margin: 1%;
+  .top-section {
+    position: relative;
+    display: $display;
+    width: 100%;
+    height: 10%;
+    #sub-icon {
+      margin: 2%;
+      width: 8%;
+      align-items: center;
+    }
+    .vertical-line {
+      margin: 1%;
+    }
+    #title-section {
+      font-size: x-large;
+      width: 80%;
+      text-align: center;
+      padding-top: 3%;
+      letter-spacing: 2px;
+    }
   }
-  #title-section {
-    font-size: x-large;
-    width: 80%;
+  .descrip-section {
+    position: relative;
+    width: 100%;
+    padding: 3%;
+  }
+  .save-section {
+    position: relative;
+    width: 100%;
+    padding: 3% 3% 3% 25%;
+    font-size: large;
+    i {
+      margin: 0 3%;
+      font-size: x-large;
+      transition: all 1s linear;
+    }
+    i.spin {
+      transform: rotate(360deg);
+    }
+    #calendarAdded{
+      visibility: hidden;
+    }
+  }
+  .info-section {
+    position: relative;
+    width: 100%;
+    #location-full,
+    #time-full {
+      position: relative;
+      padding-left: 25%;
+      font-size: large;
+      margin: 0 0 2%;
+      i {
+        padding-right: 5px;
+      }
+    }
+  }
+  .img-section {
+    position: relative;
+    height: 25%;
+    vertical-align: middle;
     text-align: center;
-    padding-top: 3%;
-    letter-spacing: 2px;
+    img{
+      height: 100%;
+      width: auto;
+    }
+  }
+  .org-section {
+    position: relative;
+    text-align: center;
+    width: 100%;
+    font-size: large;
+    margin: 2% 0;
+  }
+  .social-section {
+    position: relative;
+    text-align: center;
+    font-size: large;
+    margin: 2% 0;
+    i {
+      margin: 0 5%;
+    }
+    #facebook-full {
+      color: #1337f4;
+    }
+    #google-full {
+      color: #e90f0f;
+    }
   }
 }
-.descrip-section {
-  position: relative;
-  width: 100%;
-  padding: 3%;
-}
-.save-section{
-  position: relative;
-  width: 100%;
-  padding: 3% 3% 3% 35%;
-  i{
-    margin: 0 3% 0 3%;
-    font-size: x-large;
-    transition: all 1s linear;
-  }
-  i.spin{
-    transform: rotate(360deg);
-  }
-}
-
-#sub-icon i {}
 #title-section {}
 #title-location,
 #time-date {

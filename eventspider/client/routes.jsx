@@ -30,9 +30,7 @@ FlowRouter.route('/', {
     this.register('events', Meteor.subscribe('events'));
   },
   action: function(params) {
-    ReactLayout.render(MainLayout, {
-      content: <Feed/>,
-    });
+    ReactLayout.render(MainLayout, {content: <Feed/>});
   }
 });
 
@@ -41,20 +39,26 @@ FlowRouter.route('/feed/:title', {
     this.register('events', Meteor.subscribe('event', params.title));
   },
   action: function(params) {
-    ReactLayout.render(MainLayout, {
-      content: <EventShow flag={params.title}/>,
-    });
+    ReactLayout.render(MainLayout, {content: <EventShow flag={params.title}/>});
   }
 });
 
-FlowRouter.route('/myOrg', {
-  subscriptions: function() {
-    //this.register('colleges', Meteor.subscribe('colleges'));
+FlowRouter.route('/myOrg/:name', {
+  subscriptions: function(params) {
+    this.register('organization', Meteor.subscribe('organization', params.name))
   },
   action: function(params) {
-    ReactLayout.render(MainLayout, {
-      content: <Organizations/>
-    });
+    ReactLayout.render(MainLayout, {content: <OrgShow flag={params.name}/>});
+  }
+})
+
+FlowRouter.route('/myOrg', {
+  subscriptions: function() {
+    this.register('organizations', Meteor.subscribe('organizations'));
+  },
+  action: function(params) {
+    console.log("getting org page");
+    ReactLayout.render(MainLayout, {content: <Orgs/>});
   }
 });
 

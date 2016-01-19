@@ -6,8 +6,12 @@ Nav = React.createClass({
   componentDidMount() {
     console.log("User Role: " + this.props.userRole);
     if (this.props.userRole === "OrgOwner") {
-      $("<a href='/myOrg'>My Organizations</a>").insertAfter("#accountSection");
+      $("<a href='/myOrg' onClick={this.closeNav}>My Organizations</a>").insertAfter("#accountSection");
     }
+  },
+
+  closeNav(){
+    $(".wrapper").toggleClass("toggled");
   },
 
   render() {
@@ -21,7 +25,7 @@ Nav = React.createClass({
           <p id="p-info">Psychology</p>
         </div>
       </div>
-      <div id="sidebar-links">
+      <div id="sidebar-links" onClick={this.closeNav}>
         <a href='/feed'>Event Feed</a>
         <a href='/feed'>Org/Event Seach</a>
         <a href='/feed'>Saved Events</a>
