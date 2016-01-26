@@ -82,11 +82,8 @@ MainLayout = React.createClass({
         };
       };
 
-      return <div id="main-content">
-        <header>
+      return <div class="container" id="main-content">
           <Header school={this.data.user.profile.school} bgColor={this.data.user.profile.colors.secondary_one} fgColor={this.data.user.profile.colors.secondary_two}/>
-        </header>
-        <ReactCSSTransitionGroup transitionName="main" transitionEnterTimeout={500} transitionLeaveTimeout={300}>
           <div className="wrapper" style={{
             backgroundColor: bgColor
           }} onTouchStart={this.moveInit} onTouchMove={this.moveItem} onTouchEnd={this.moveEnd} onClick={this.closeNav}>
@@ -97,11 +94,7 @@ MainLayout = React.createClass({
               {this.props.content}
             </div>
           </div>
-        </ReactCSSTransitionGroup>
-        <footer>
           <Footer bgColor={this.data.user.profile.colors.secondary_one} fgColor={this.data.user.profile.colors.secondary_two}/>
-        </footer>
-
       </div>
     } else {
       return <Login/>
