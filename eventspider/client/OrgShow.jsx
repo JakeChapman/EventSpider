@@ -13,7 +13,7 @@ OrgShow = React.createClass({
 
   render() {
     return <div className="org">
-      <Org key={this.data.org._id} name={this.data.org.title} descrip={this.data.org.description} category={this.data.org.category} link={this.data.org.link}  isSelected={true}/>
+      <Org key={this.data.org._id} name={this.data.org.title} descrip={this.data.org.description} category={this.data.org.category} link={this.data.org.link}  isSelected={true} status={"PENDING"}/>
     </div>
   }
 });

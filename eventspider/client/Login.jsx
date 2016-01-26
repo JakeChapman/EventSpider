@@ -36,7 +36,7 @@ Login = React.createClass({
 
   render() {
     return <div>
-      <div className="background-image"></div>
+      <div className="media-object background-image"></div>
       <div className="login" id="login-wrapper">
         <div className="login-content">
           <img alt="Company Image" id="logo" src="logo.png"/>

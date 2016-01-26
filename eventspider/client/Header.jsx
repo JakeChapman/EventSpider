@@ -13,7 +13,7 @@ Header = React.createClass({
     }
 
     return <div className="navbar navbar-default navbar-fixed-top" role="navigation" id="nav-header" style={divStyle}>
-      <div className="container">
+      <div className="container-fluid">
         <h3 id="mainHeader">{this.props.school}</h3>
       </div>
     </div>

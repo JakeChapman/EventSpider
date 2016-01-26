@@ -29,3 +29,5 @@ kadira:flow-router
 kadira:react-layout
 semantic:ui-transition
 meteorhacks:search-source
+aldeed:simple-schema
+dburles:collection-helpers
