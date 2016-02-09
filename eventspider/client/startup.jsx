@@ -1,7 +1,7 @@
 if (Meteor.isClient) {
 
   document.getElementsByTagName("head")[0].innerHTML += "<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">";
-
+  document.getElementsByTagName("head")[0].innerHTML += "<script type=\"text/javascript\" src=\"js/jspdf/ jspdf.plugin.addimage.js\"></script>";
   // This code is executed on the client only
   Accounts.config({
     sendVerificationEmail: true, forbidClientAccountCreation: true,
@@ -15,4 +15,5 @@ if (Meteor.isClient) {
     // Use Meteor.startup to render the component after the page is ready
     //React.render(<App />, document.getElementById("render-target"));
   });
+
 }

@@ -4,7 +4,8 @@ Org = React.createClass({
     descrip: React.PropTypes.string,
     category: React.PropTypes.string,
     link: React.PropTypes.string,
-    isSelected: React.PropTypes.bool
+    isSelected: React.PropTypes.bool,
+    EID: React.PropTypes.number
   },
 
   expandOrg(e){

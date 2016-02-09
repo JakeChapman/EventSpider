@@ -27,3 +27,9 @@ semantic:ui-transition
 meteorhacks:search-source
 aldeed:simple-schema
 dburles:collection-helpers
+meteorflux:dispatcher
+meteorflux:reactive-state
+mizzao:bootboxjs
+dschulz:jquery-qrcode
+chipcastledotcom:meteor-jspdf
+base64

@@ -62,6 +62,12 @@ FlowRouter.route('/myOrg', {
   }
 });
 
+FlowRouter.route('/qrCode', {
+  action: function(params) {
+    ReactLayout.render(MainLayout, {content: <QrCodeGenerator/>})
+  }
+});
+
 FlowRouter.route('/registration', {
   subscriptions: function() {
     this.register('colleges', Meteor.subscribe('colleges'));

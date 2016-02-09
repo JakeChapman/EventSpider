@@ -17,6 +17,22 @@ Event = React.createClass({
     FlowRouter.go('/feed/' + this.props.title);
   },
 
+  componentDidMount() {
+    if (Meteor.isCordova) {
+
+      $('#qr-code-scanner').on('click', function() {
+        console.log("Click fired");
+        cordova.plugins.barcodeScanner.scan(function(result) {
+          bootbox.alert("We got a barcode\n" +
+            "Result: " + result.text + "\n" + "Format: " + result.format + "\n" + "Cancelled " + result.cancelled);
+        }, function(error) {
+          bootbox.alert("Scanning failed: " + error);
+        });
+      });
+
+    }
+  },
+
   addToCalendar() {
     alert('Adding to Calendar');
     $('#calendarAdded').css('color', 'green');
@@ -27,6 +43,21 @@ Event = React.createClass({
   render() {
 
     if (this.props.isSelected) {
+
+      let user = Meteor.user();
+
+      let checkInComp = {};
+
+      for (var i = 0; i < user.profile.eids.length; i++) {
+        console.log(user.profile.eids[i]);
+      }
+
+      if ($.inArray(this.props.EID, user.profile.eids) > -1) {
+        checkInComp = <PDFButton/>;
+      } else {
+        checkInComp = <QrScanner/>
+      }
+
       return (
         <div className="card full">
           <div className="top-section">
@@ -68,6 +99,7 @@ Event = React.createClass({
             <i className="zmdi zmdi-facebook-box zmdi-hc-2x" id="facebook-full"></i>
             <i className="zmdi zmdi-google-plus zmdi-hc-2x" id="google-full"></i>
           </div>
+          {checkInComp}
         </div>
       )
     } else {
