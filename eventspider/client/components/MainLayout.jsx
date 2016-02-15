@@ -44,7 +44,7 @@ MainLayout = React.createClass({
         $(".wrapper").toggleClass("toggled");
         this.setState({x: 0, toggled: false});
       }else{
-        FlowRouter.go('/filter');
+        FlowRouter.go('/registration');
       }
     }
   },

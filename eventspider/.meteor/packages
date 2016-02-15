@@ -13,15 +13,12 @@ tracker                 # Meteor's client-side reactive programming library
 
 standard-minifiers      # JS/CSS minifiers run for production mode
 es5-shim                # ECMAScript 5 compatibility for older browsers.
-ecmascript              # Enable ECMAScript2015+ syntax in app code
+ecmascript
 
 fourseven:scss
 ixdi:material-design-iconic-font
 twbs:bootstrap
-chart:chart
 
-gfk:notifications
-ian:accounts-ui-bootstrap-3
 accounts-password
 react
 kadira:flow-router
@@ -30,3 +27,9 @@ semantic:ui-transition
 meteorhacks:search-source
 aldeed:simple-schema
 dburles:collection-helpers
+meteorflux:dispatcher
+meteorflux:reactive-state
+mizzao:bootboxjs
+dschulz:jquery-qrcode
+chipcastledotcom:meteor-jspdf
+base64
