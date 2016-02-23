@@ -68,4 +68,18 @@ if (Meteor.isServer) {
 
     return this.ready();
   });
+
+  Meteor.methods({
+      //Generate PDF
+      'createPDF': function(eventId){
+          var doc = new PDFDocument({size: 'A4', margin: 50});
+          doc.image('/eventCode.jpeg', 10, 10, {height: 75});
+          doc.fontSize(12);
+          doc.text('PDFKit is simple', 10, 30, {align: 'center', width: 200});
+
+      }
+
+
+
+    });
 }

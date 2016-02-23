@@ -99,7 +99,9 @@ Event = React.createClass({
             <i className="zmdi zmdi-facebook-box zmdi-hc-2x" id="facebook-full"></i>
             <i className="zmdi zmdi-google-plus zmdi-hc-2x" id="google-full"></i>
           </div>
-          {checkInComp}
+          <div>
+            {checkInComp}
+          </div>
         </div>
       )
     } else {
