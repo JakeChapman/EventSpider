@@ -30,30 +30,11 @@ if (Meteor.isServer) {
   console.log("Publishing Data: Events, Colleges done--something");
 
   Meteor.publish('organizations', function() {
-    console.log("Finding orgs");
-    organizations = Organizations.find({});
-
-    console.log("Number of organizations: " + organizations.count());
-
-    if (organizations) {
-      return organizations;
-    }
-
-    return this.ready();
+    return Organizations.find({});
   });
 
   Meteor.publish('organization', function(key) {
-
-    console.log(key);
-    organization = Organizations.find({name: key});
-
-    console.log("Number of organization: " + organization.count());
-
-    if (organization) {
-      return organization;
-    }
-
-    return this.ready();
+    return Organizations.find({name: key});
   });
 
   Meteor.methods({

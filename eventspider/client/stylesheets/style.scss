@@ -92,19 +92,6 @@ html {
   right: 0;
   top: 0;
 }
-.options{
-  z-index: 1000;
-  position: absolute;
-  top: 85%;
-  width: 50%;
-  margin-left: 50%;
-  background-color: white;
-  color: black;
-  transition: all 0.4s linear;
-}
-.options.selectType{
-  z-index: 10000;
-}
 
 
 .main-appear.main-appear-active {

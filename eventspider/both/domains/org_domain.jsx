@@ -3,6 +3,10 @@
 OrgDomain = {
 
     getAllOrgs(){
-        return Events.find({}, {sort: {createdAt: -1}}).fetch();
+        return Organizations.find({}, {sort: {createdAt: -1}}).fetch();
+    },
+
+    getSelectedOrg(){
+        return Organizations.findOne();
     }
 }

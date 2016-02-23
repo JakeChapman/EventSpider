@@ -41,21 +41,14 @@ FlowRouter.route('/feed/:title', {
 });
 
 FlowRouter.route('/myOrg/:name', {
-  subscriptions: function(params) {
-    this.register('organization', Meteor.subscribe('organization', params.name))
-  },
-  action: function(params) {
-    ReactLayout.render(MainLayout, {content: <OrgShow flag={params.name}/>});
+    action: function(params) {
+        ReactLayout.render(MainLayout, {content: <OrgShowContainer name={params.name}/>});
   }
-})
+});
 
 FlowRouter.route('/myOrg', {
-  subscriptions: function() {
-    this.register('organizations', Meteor.subscribe('organizations'));
-  },
   action: function(params) {
-    console.log("getting org page");
-    ReactLayout.render(MainLayout, {content: <Orgs/>});
+    ReactLayout.render(MainLayout, {content: <OrgContainer/>});
   }
 });
 
