@@ -5,25 +5,12 @@ if (Meteor.isServer) {
 
   Meteor.publish('events', function() {
     //console.log("Number of Documents on Server: " + Questions.find().count());
-    events = Events.find({});
-
-    if (events) {
-      return events;
-    }
-
-    return this.ready();
+    return Events.find({});
   });
 
   Meteor.publish('event', function(key) {
     //console.log("Number of Documents on Server: " + Questions.find().count());
-    event = Events.find({title: key});
-
-    console.log(key);
-    if (event) {
-      return event;
-    }
-
-    return this.ready();
+    return Events.find({title: key});
   });
 
   console.log("Publishing Data: Events done");
