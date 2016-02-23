@@ -1,1 +1,0 @@
-OrgStore = new MeteorFlux.Dispatcher();
