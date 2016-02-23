@@ -12,7 +12,6 @@
       <change type="DELETED" beforePath="$PROJECT_DIR$/client/OrgShow.jsx" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/client/Organizations.jsx" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/client/Registration.jsx" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="eventspider.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -71,7 +70,7 @@
     <detection-done>true</detection-done>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="65" />
+    <option name="x" value="-1301" />
     <option name="y" value="24" />
     <option name="width" value="1301" />
     <option name="height" value="744" />
@@ -271,7 +270,7 @@
     <option name="totallyTimeSpent" value="4000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="65" y="24" width="1301" height="744" extended-state="6" />
+    <frame x="-1301" y="24" width="1301" height="744" extended-state="6" />
     <editor active="false" />
     <layout>
       <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26275116" sideWeight="0.4964029" order="2" side_tool="false" content_ui="tabs" />
