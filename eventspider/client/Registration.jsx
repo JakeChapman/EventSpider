@@ -78,8 +78,7 @@ Registration = React.createClass({
 
   render() {
     return ( <div>
-      <div className="background-image"></div>
-        <div className="register-content">
+        <div className="register-content background-image">
           <h2 id="register-header">Create an account</h2>
           <form id="register-form" role="form">
 
@@ -118,8 +117,8 @@ Registration = React.createClass({
             </div>
 
           </form>
-        </div>
       </div>
+    </div>
     )
   }
 });
