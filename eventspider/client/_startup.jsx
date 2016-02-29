@@ -1,7 +1,11 @@
 if (Meteor.isClient) {
 
   document.getElementsByTagName("head")[0].innerHTML += "<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">";
-  document.getElementsByTagName("head")[0].innerHTML += "<script type=\"text/javascript\" src=\"js/jspdf/ jspdf.plugin.addimage.js\"></script>";
+  document.getElementsByTagName("head")[0].innerHTML += "<script type=\"text/javascript\" src=\"libs/png_support/zlib.js\"></script>\n" +
+      "<script type=\"text/javascript\" src=\"libs/png_support/png.js\"></script>\n" +
+      "<script type=\"text/javascript\" src=\"jspdf.plugin.addimage.js\"></script>\n" +
+      "<script type=\"text/javascript\" src=\"jspdf.plugin.png_support.js\"></script>\n" +
+      "<script type=\"text/javascript\" src=\"jspdf.js\"></script>";
   // This code is executed on the client only
   Accounts.config({
     sendVerificationEmail: true, forbidClientAccountCreation: true,

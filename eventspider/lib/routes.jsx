@@ -30,16 +30,13 @@ FlowRouter.route('/', {
     this.register('events', Meteor.subscribe('events'));
   },
   action: function(params) {
-    ReactLayout.render(MainLayout, {content: <Feed/>});
+    ReactLayout.render(MainLayout, {content: <FeedContainer/>});
   }
 });
 
 FlowRouter.route('/feed/:title', {
-  subscriptions: function(params) {
-    this.register('events', Meteor.subscribe('event', params.title));
-  },
   action: function(params) {
-    ReactLayout.render(MainLayout, {content: <EventShow flag={params.title}/>});
+    ReactLayout.render(MainLayout, {content: <EventShowContainer title={params.title}/>});
   }
 });
 

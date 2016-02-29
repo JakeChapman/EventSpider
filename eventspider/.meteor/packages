@@ -31,5 +31,5 @@ meteorflux:dispatcher
 meteorflux:reactive-state
 mizzao:bootboxjs
 dschulz:jquery-qrcode
-chipcastledotcom:meteor-jspdf
-base64
+chipcastledotcom:jspdf
+pascoual:pdfkit

@@ -17,7 +17,7 @@ Login = React.createClass({
         FlowRouter.go('/');
       } else {
         console.log("error");
-        Notifications.warn('Login Failed', err);
+        console.log(err);
       }
     });
   },

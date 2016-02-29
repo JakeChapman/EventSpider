@@ -1,1 +1,0 @@
-UserStore = new MeteorFlux.Dispatcher();

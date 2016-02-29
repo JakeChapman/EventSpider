@@ -1,1 +1,0 @@
-EventStore = new MeteorFlux.Dispatcher();
