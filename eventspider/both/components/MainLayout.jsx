@@ -23,7 +23,7 @@ MainLayout = React.createClass({
   },
   moveItem(e) {
     swipeStatus = (e.touches[0].pageX - this.state.initialX);
-    if (swipeStatus > 0 && swipeStatus <= 250) {
+    if (swipeStatus >= 0 && swipeStatus <= 350) {
       this.setState({x: swipeStatus, dragging: "left", toggled: true});
     } else if (swipeStatus < 0) {
       this.setState({dragging: "right"});
@@ -39,7 +39,7 @@ MainLayout = React.createClass({
         $(".wrapper").toggleClass("toggled");
         this.setState({x: 250, toggled: true});
       }
-    }else if (this.state.dragging === "right") {
+    }else if (this.state.dragging === "right" && this.state.x < -150) {
       if (this.state.toggled) {
         $(".wrapper").toggleClass("toggled");
         this.setState({x: 0, toggled: false});
@@ -56,6 +56,9 @@ MainLayout = React.createClass({
     }
   },
 
+    changeBackground(navStyle){
+        $('body').css(navStyle);
+    },
   render() {
 
     if (this.data.user) {
@@ -82,7 +85,9 @@ MainLayout = React.createClass({
         };
       };
 
-      return <div class="container" id="main-content">
+        this.changeBackground(navStyle);
+
+      return <div id="main-content">
           <Header school={this.data.user.profile.school} bgColor={this.data.user.profile.colors.secondary_one} fgColor={this.data.user.profile.colors.secondary_two}/>
           <div className="wrapper" style={{
             backgroundColor: bgColor

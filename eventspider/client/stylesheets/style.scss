@@ -32,6 +32,7 @@ html {
   margin: 0;
   position: fixed;
   background-color: LightGray;
+  display: inline-flex;
 }
 
 .navBtn{
@@ -93,7 +94,6 @@ html {
   top: 0;
 }
 
-
 .main-appear.main-appear-active {
   opacity: 1;
   transition: opacity .5s ease-in;
@@ -104,4 +104,8 @@ html {
 .main-leave.main-leave-active{
   opacity: 0.01;
   transition:  2s ease-out;
+}
+
+.card{
+  height: 15%;
 }

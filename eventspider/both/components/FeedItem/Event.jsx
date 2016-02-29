@@ -27,30 +27,22 @@ this.FeedEvent = React.createClass({
 
       let trimmed_descrip = this.props.descrip.substring(0, 60) + "...";
 
-      return <div className="card" onClick={this.expandEvent}>
-        <div className="feed">
-          <div id="sub-icon">
-            <i className="zmdi zmdi-run zmdi-hc-3x"/>
-          </div>
-          <div className="vertical-line"/>
-          <div id="title-location">
-            {this.props.title}
-            <div id="location">
-              {this.props.location}
+      return (
+        <div className="card medium" onClick={this.expandEvent}>
+            <div className="card-content">
+                <span className="card-title">{this.props.title}</span>
+                <p id="short-descrip">
+                    {trimmed_descrip}
+                </p>
+                <div className="col-sm-6">
+                    {this.props.date}
+                </div>
+                <div className="col-sm-6">
+                    {this.props.start_time} - {this.props.end_time}
+                </div>
             </div>
-            <div id="short-descrip">
-              {trimmed_descrip}
-            </div>
-          </div>
-          <div className="vertical-line"/>
-          <div id="time-date">
-            {this.props.date}
-            {this.props.start_time}
-            -
-            {this.props.end_time}
-          </div>
         </div>
-      </div>
+      )
     }
 
 });
