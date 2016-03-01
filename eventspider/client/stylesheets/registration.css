@@ -33,7 +33,7 @@
     color: white;
   }
 
-  #email, #password {
+  #inputField{
     width: 80%;
     margin-left: 10%;
     margin-right: 10%;

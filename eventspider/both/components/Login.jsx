@@ -36,8 +36,7 @@ Login = React.createClass({
 
   render() {
     return <div>
-      <div className="media-object background-image"></div>
-      <div className="login" id="login-wrapper">
+      <div className="login background-image" id="login-wrapper">
         <div className="login-content">
           <img alt="Company Image" id="logo" src="logo.png"/>
           <div className='social-login'>
@@ -79,7 +78,7 @@ Login = React.createClass({
           <div className="btn" id="registerBtn">
             <button className="btn btn-lg btn-primary btn-block" id="newUser" onClick={this.handleNewUser}>
               <span className="glyphicon glyphicon-user"></span>
-              Register New User
+              Sign Up
             </button>
           </div>
         </div>

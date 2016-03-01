@@ -25,11 +25,7 @@ Registration = React.createClass({
   },
 
   getColleges() {
-    //if ($("#collegeSearch").val().length() > 3) {
-    //  TODO: Loop through query and return top 5 colleges (sorted)
-    //      appending them as options to the select tag using .append()
-    //$("#collegeSearch").val(this.data.colleges[0].name);
-    //  };
+    //  Loop through query and return top 5 colleges (sorted)
     var collegeList = $("#collegelist");
     console.log($("#collegeSearch").val());
     this.setState({college: $("#collegeSearch").val()});
