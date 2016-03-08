@@ -3,19 +3,24 @@ if (Meteor.isServer) {
   //    console.log(process.env.MONGO_URL);
   //    console.log("Publishing Data");
 
-  Meteor.publish('events', function() {
+    Meteor.publish('categories', function() {
+        //console.log("Number of Documents on Server: " + Questions.find().count());
+        return Categories.find({});
+    });
+
+    Meteor.publish('events', function() {
     //console.log("Number of Documents on Server: " + Questions.find().count());
     return Events.find({});
-  });
+    });
 
-  Meteor.publish('event', function(key) {
+    Meteor.publish('event', function(key) {
     //console.log("Number of Documents on Server: " + Questions.find().count());
     return Events.find({title: key});
-  });
+    });
 
-  console.log("Publishing Data: Events done");
+    console.log("Publishing Data: Events done");
 
-  Meteor.publish('colleges', function() {
+    Meteor.publish('colleges', function() {
     colleges = Colleges.find({});
 
     console.log("Number of Colleges: " + colleges.count());
@@ -25,19 +30,19 @@ if (Meteor.isServer) {
     }
 
     return this.ready();
-  });
+    });
 
-  console.log("Publishing Data: Events, Colleges done--something");
+    console.log("Publishing Data: Events, Colleges done--something");
 
-  Meteor.publish('organizations', function() {
+    Meteor.publish('organizations', function() {
     return Organizations.find({});
-  });
+    });
 
-  Meteor.publish('organization', function(key) {
+    Meteor.publish('organization', function(key) {
     return Organizations.find({name: key});
-  });
+    });
 
-  Meteor.methods({
+    Meteor.methods({
       //Generate PDF
       'createPDF': function(eventId){
           var doc = new PDFDocument({size: 'A4', margin: 50});

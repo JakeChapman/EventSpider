@@ -7,7 +7,7 @@ class Feed extends React.Component{
 
   renderEvents() {
     return this.props.feedItems.map((event) => {
-      return <FeedEvent key={event._id} title={event.title} location={event.location} date={event.date} descrip={event.description} start_time={event.start_time} end_time={event.end_time} on_campus={event.on_campus} isSelected={false}/>;
+      return <FeedEvent key={event._id} _id={event._id} title={event.title} location={event.location} date={event.date} descrip={event.description} start_time={event.start_time} end_time={event.end_time} on_campus={event.on_campus} isSelected={false}/>;
     });
   }
   render() {

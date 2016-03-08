@@ -1,5 +1,6 @@
 this.FeedEvent = React.createClass({
   propTypes: {
+    _id: React.PropTypes.object,
     title: React.PropTypes.string,
     descrip: React.PropTypes.string,
     location: React.PropTypes.string,
@@ -13,7 +14,7 @@ this.FeedEvent = React.createClass({
 
   expandEvent(e) {
     e.preventDefault();
-    FlowRouter.go('/feed/' + this.props.title);
+    FlowRouter.go('/feed/' + this.props._id._str);
   },
 
   addToCalendar() {

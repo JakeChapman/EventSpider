@@ -26,17 +26,14 @@ FlowHelpers = {
 // Flow Router here down
 
 FlowRouter.route('/', {
-  subscriptions: function() {
-    this.register('events', Meteor.subscribe('events'));
-  },
   action: function(params) {
     ReactLayout.render(MainLayout, {content: <FeedContainer/>});
   }
 });
 
-FlowRouter.route('/feed/:title', {
+FlowRouter.route('/feed/:key', {
   action: function(params) {
-    ReactLayout.render(MainLayout, {content: <EventShowContainer title={params.title}/>});
+    ReactLayout.render(MainLayout, {content: <EventShowContainer key={params.key}/>});
   }
 });
 
@@ -52,9 +49,9 @@ FlowRouter.route('/myOrg', {
   }
 });
 
-FlowRouter.route('/qrCode', {
-  action: function(params) {
-    ReactLayout.render(MainLayout, {content: <QrCodeGenerator/>})
+FlowRouter.route('/createEvent',{
+  action: function(params){
+    ReactLayout.render(MainLayout, {content: <EventCreation/>});
   }
 });
 
