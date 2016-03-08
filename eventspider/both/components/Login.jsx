@@ -49,9 +49,10 @@ Login = React.createClass({
               Sign in with Twitter
             </button>
           </div>
+
           <h2 id="login-break">
             <span>
-              or
+              OR
             </span>
           </h2>
 
