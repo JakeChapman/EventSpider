@@ -1,4 +1,4 @@
-Registration = React.createClass({
+this.Registration = React.createClass({
 
   mixins: [ReactMeteorData],
 
@@ -31,10 +31,7 @@ Registration = React.createClass({
     //$("#collegeSearch").val(this.data.colleges[0].name);
     //  };
     var collegeList = $("#collegelist");
-    console.log($("#collegeSearch").val());
     this.setState({college: $("#collegeSearch").val()});
-    console.log("Adding: " + this.data.colleges);
-    console.log(this.state.college);
     //clear the dropdown list
     collegeList.empty();
     $.each(this.data.colleges, function(key, val) {
@@ -68,10 +65,10 @@ Registration = React.createClass({
 
     Accounts.createUser(userObject, function(err) {
       if (!err) {
-        console.log("Here");
-        FlowRouter.go("/");
+        console.log("Account created successfully");
+        ReactLayout.render(MainLayout, {content: <FeedContainer/>});
       } else {
-        Notifications.warn("Registration Failed", err);
+        console.log("Failed account creation");
       }
     });
   },

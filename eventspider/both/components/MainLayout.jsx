@@ -28,6 +28,8 @@ MainLayout = React.createClass({
     } else if (swipeStatus < 0) {
       this.setState({dragging: "right"});
       //FlowRouter.go('/registration');
+    }else{
+      
     }
   },
   moveEnd(e) {
@@ -43,9 +45,13 @@ MainLayout = React.createClass({
       if (this.state.toggled) {
         $(".wrapper").toggleClass("toggled");
         this.setState({x: 0, toggled: false});
-      }else{
-        FlowRouter.go('/filter');
+      }else if(this.state.x < -150){
+        FlowRouter.go('/registration');
+      }else {
+        //Do nothing
       }
+    }else{
+      //Do nothing
     }
   },
 
@@ -82,7 +88,7 @@ MainLayout = React.createClass({
         };
       };
 
-      return <div class="container" id="main-content">
+      return <div id="main-content">
           <Header school={this.data.user.profile.school} bgColor={this.data.user.profile.colors.secondary_one} fgColor={this.data.user.profile.colors.secondary_two}/>
           <div className="wrapper" style={{
             backgroundColor: bgColor

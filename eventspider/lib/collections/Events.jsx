@@ -3,7 +3,7 @@ Events = new Mongo.Collection("Events");
 
 
 Meteor.methods({
-  addEvent: function(event) {
+  "Event.create": function(event) {
 
     if (!Meteor.userId()) {
       throw new Meteor.Error("not-authorized");

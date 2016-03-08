@@ -1,4 +1,4 @@
-Login = React.createClass({
+this.Login = React.createClass({
   handleLogin(event) {
     console.log('HERE');
     event.preventDefault();
@@ -14,10 +14,10 @@ Login = React.createClass({
     Meteor.loginWithPassword(email, password, function(err) {
       if (!err) {
         console.log("success");
-        FlowRouter.go('/');
+        ReactLayout.render(MainLayout, {content: <FeedContainer/>});
       } else {
         console.log("error");
-        console.log(err);
+        Notifications.warn('Login Failed', err);
       }
     });
   },
@@ -46,7 +46,7 @@ Login = React.createClass({
             </button>
             <button className="btn btn-lg" id='google'>
               <i className="zmdi zmdi-google-plus zmdi-hc-2x"></i>
-              Sign in with Twitter
+              Sign in with Google+
             </button>
           </div>
 

@@ -1,24 +1,12 @@
-Orgs = React.createClass({
-
-  mixins: [ReactMeteorData],
-
-  getMeteorData() {
-    console.log("getting orgs");
-    return {organizations: Organizations.find({}).fetch()};
-  },
-
-  orgClick() {
-    alert("Click");
-  },
+class OrgList extends React.Component {
 
   renderOrgs() {
-    return this.data.organizations.map((org) => {
+    return this.props.orgItems.map((org) => {
       return <Org key={org._id} name={org.name} descrip={org.description} category={org.category} link={org.link} isSelected={false} status={"PENDING"}/>;
     });
-  },
+  }
 
   render() {
-    console.log("Rendering orgs");
     return <div className="myOrg-wrapper">
         <div className="org-title">
           My Organizations
@@ -26,6 +14,13 @@ Orgs = React.createClass({
         <div className="organizations">
           {this.renderOrgs()}
         </div>
+        <FloatButton/>
       </div>
   }
-});
+}
+
+OrgList.propTypes = {
+    orgItems: React.PropTypes.array
+};
+
+this.OrgList = OrgList;

@@ -6,7 +6,15 @@ EventsDomain = {
         return Events.find({}, {sort: {createdAt: -1}}).fetch();
     },
 
-    getSelectEvent(){
-        return Events.findOne();
+    getSelectEvent(key){
+        return Events.findOne(new Meteor.Collection.ObjectID(key));
+    },
+
+    handleCreateEevent(data){
+        Meteor.call('Event.create' ,data);
+    },
+
+    getAllCategories(){
+        return Categories.find().fetch();
     }
 }

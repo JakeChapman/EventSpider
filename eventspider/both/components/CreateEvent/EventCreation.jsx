@@ -1,11 +1,10 @@
-this.EventShowContainer = React.createClass({
+this.EventCreation = React.createClass({
     mixins: [ReactMeteorData],
-
 
     // subscribe to a reactive stream of data from
     // publication at:  server/publications/posts.js
     startMeteorSubscriptions() {
-        return Meteor.subscribe("events");
+        return Meteor.subscribe("categories");
     },
 
     // re-renders view if any reactive data source changes. `sub` is reactive
@@ -14,14 +13,15 @@ this.EventShowContainer = React.createClass({
         var sub = this.startMeteorSubscriptions();
 
         return {
-            feedReady: sub.ready(),
-            eventItem: EventsDomain.getSelectEvent(this.props.key)
+            colReady: sub.ready(),
+            items: EventsDomain.getAllCategories()
         };
     },
-    
 
-  render() {
+    render() {
+        return <CreateEvent
+            items={this.data.items}
+        />;
+    }
 
-    return <EventShow eventItem={this.data.eventItem}/>
-  }
 });

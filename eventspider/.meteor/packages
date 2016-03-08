@@ -19,17 +19,13 @@ fourseven:scss
 ixdi:material-design-iconic-font
 twbs:bootstrap
 
+#fezvrasta:bootstrap-material-design
+
 accounts-password
 react
 kadira:flow-router
 kadira:react-layout
-semantic:ui-transition
 meteorhacks:search-source
 aldeed:simple-schema
 dburles:collection-helpers
-meteorflux:dispatcher
-meteorflux:reactive-state
 mizzao:bootboxjs
-dschulz:jquery-qrcode
-chipcastledotcom:jspdf
-pascoual:pdfkit

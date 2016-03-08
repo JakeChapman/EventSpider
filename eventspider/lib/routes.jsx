@@ -26,42 +26,32 @@ FlowHelpers = {
 // Flow Router here down
 
 FlowRouter.route('/', {
-  subscriptions: function() {
-    this.register('events', Meteor.subscribe('events'));
-  },
   action: function(params) {
     ReactLayout.render(MainLayout, {content: <FeedContainer/>});
   }
 });
 
-FlowRouter.route('/feed/:title', {
+FlowRouter.route('/feed/:key', {
   action: function(params) {
-    ReactLayout.render(MainLayout, {content: <EventShowContainer title={params.title}/>});
+    ReactLayout.render(MainLayout, {content: <EventShowContainer key={params.key}/>});
   }
 });
 
 FlowRouter.route('/myOrg/:name', {
-  subscriptions: function(params) {
-    this.register('organization', Meteor.subscribe('organization', params.name))
-  },
-  action: function(params) {
-    ReactLayout.render(MainLayout, {content: <OrgShow flag={params.name}/>});
-  }
-})
-
-FlowRouter.route('/myOrg', {
-  subscriptions: function() {
-    this.register('organizations', Meteor.subscribe('organizations'));
-  },
-  action: function(params) {
-    console.log("getting org page");
-    ReactLayout.render(MainLayout, {content: <Orgs/>});
+    action: function(params) {
+        ReactLayout.render(MainLayout, {content: <OrgShowContainer name={params.name}/>});
   }
 });
 
-FlowRouter.route('/qrCode', {
+FlowRouter.route('/myOrg', {
   action: function(params) {
-    ReactLayout.render(MainLayout, {content: <QrCodeGenerator/>})
+    ReactLayout.render(MainLayout, {content: <OrgContainer/>});
+  }
+});
+
+FlowRouter.route('/createEvent',{
+  action: function(params){
+    ReactLayout.render(MainLayout, {content: <EventCreation/>});
   }
 });
 

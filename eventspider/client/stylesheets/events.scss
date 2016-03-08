@@ -32,7 +32,29 @@ $showSize: small;
   position: relative;
   width: 100%;
 }
+.create-event{
+  display: table;
+  #eText, #eDescrip, #eList{
+    margin: 2% 0 2% 0;
+    position: relative;
+    text-align: center;
+    width: 100%;
+    textarea{
+      position: relative;
+      margin: 0 15% 0 15%;
+      width: 70%;
+    }
+    div{
+      overflow: scroll;
+      position: relative;
+      width: 50%;
+      align-items: center;
+    }
+  }
+}
+
 .full {
+  margin-top: 5%;
   height: 85%;
   display: block;
   #sub-icon {
