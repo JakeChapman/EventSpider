@@ -63,3 +63,9 @@ FlowRouter.route('/registration', {
     ReactLayout.render(Registration);
   }
 });
+
+FlowRouter.route('/filter', {
+  action: function(params) {
+    ReactLayout.render(Filter);
+  }
+});

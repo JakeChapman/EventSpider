@@ -62,6 +62,7 @@ this.Registration = React.createClass({
       profile: profile
     };
 
+
     Accounts.createUser(userObject, function(err) {
       if (!err) {
         console.log("Account created successfully");
@@ -74,36 +75,35 @@ this.Registration = React.createClass({
 
   render() {
     return ( <div>
-      <div className="background-image"></div>
-        <div className="register-content">
+        <div className="register-content background-image">
           <h2 id="register-header">Create an account</h2>
           <form id="register-form" role="form">
 
             <div className="form-group form-inline">
               <label htmlFor="fname">First Name</label>
-              <input type="text" className="form-control" id="fname" placeholder="Enter First Name"/>
+              <input type="text" className="form-control" id="inputField" placeholder="Enter First Name"/>
             </div>
 
             <div className="form-group form-inline">
               <label htmlFor="lname">Last Name</label>
-              <input type="text" className="form-control" id="lname" placeholder="Enter Last Name"/>
+              <input type="text" className="form-control" id="inputField" placeholder="Enter Last Name"/>
             </div>
 
             <div className="form-group form-inline">
               <label htmlFor="college">College</label>
-              <input type="text" className="form-control" id="collegeSearch" placeholder="Enter College" list="collegelist" onKeyUp={this.getColleges}/>
+              <input type="text" className="form-control" id="inputField" placeholder="Enter College" list="collegelist" onKeyUp={this.getColleges}/>
               <datalist id='collegelist'></datalist>
             </div>
 
-            <div className="form-group">
-              <label htmlFor="email" className="form-inline">Email</label>
-              <input type="email" className="form-control form-inline" id="email" placeholder="Enter Email"/>
+            <div className="form-group form-inline">
+              <label htmlFor="email">Email</label>
+              <input type="email" className="form-control" id="inputField" placeholder="Enter Email"/>
               <input type="email" className="form-control" id="confirm-email" placeholder="Confirm Email"/>
             </div>
 
             <div className="form-group" id="passwordFields">
               <label htmlFor="password" className="form-inline">Password</label>
-              <input type="password" className="form-control form-inline" id="password" placeholder="Enter Password"/>
+              <input type="password" className="form-control form-inline" id="inputField" placeholder="Enter Password"/>
               <input type="password" className="form-control col-md-10" id="confirm-password" placeholder="Confirm Password"/>
             </div>
 
@@ -114,8 +114,8 @@ this.Registration = React.createClass({
             </div>
 
           </form>
-        </div>
       </div>
+    </div>
     )
   }
 });

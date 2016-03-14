@@ -28,6 +28,8 @@ MainLayout = React.createClass({
     } else if (swipeStatus < 0) {
       this.setState({dragging: "right"});
       //FlowRouter.go('/registration');
+    }else{
+      
     }
   },
   moveEnd(e) {
@@ -45,7 +47,11 @@ MainLayout = React.createClass({
         this.setState({x: 0, toggled: false});
       }else if(this.state.x < -150){
         FlowRouter.go('/registration');
+      }else {
+        //Do nothing
       }
+    }else{
+      //Do nothing
     }
   },
 

@@ -1,7 +1,6 @@
   /* Login Page */
   .login {
     padding-top: 5%;
-    padding-bottom: 10%;
   }
   .login-content {
     height: 100%;
@@ -24,19 +23,21 @@
     -moz-background-size: 100% 100%;
     -o-background-size: 100% 100%;
     background-size: 100% 100%;
-    -webkit-filter: blur(5px);
+    /*-webkit-filter: blur(5px);
     -moz-filter: blur(5px);
     -o-filter: blur(5px);
     -ms-filter: blur(5px);
-    filter: blur(5px);
+    filter: blur(5px);*/
     position: absolute;
-    height: 100%;
-    width: 100%;
+    /*height: 100%;
+    width: 100%;*/
     overflow-x: hidden;
-    float: left;
+      top: 0;
+      bottom: 0;
   }
   #ResetPassword {
     text-align: center;
+    margin-bottom: 5%;
   }
   #ResetPassword a {
     color: LightSlateGray;
@@ -91,15 +92,15 @@
   .social-login #google i {
     color: #eb1515;
   }
-  #login-break {
+
+  #login-break{
     width: 100%;
     text-align: center;
-    border-bottom: 1px solid #000;
-    line-height: 0.1em;
     margin: 10px 0 20px;
+    color: white;
   }
-  #login-break span {
+  /*#login-break span {
       opacity: 1;
       padding:0 10px;
-  }
+  }*/
   /* End Login Page */
