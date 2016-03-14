@@ -36,7 +36,7 @@ this.Login = React.createClass({
 
   render() {
     return <div>
-      <div className="login background-image" id="login-wrapper">
+      <div className="login background-image">
         <div className="login-content">
           <img alt="Company Image" id="logo" src="logo.png"/>
           <div className='social-login'>

@@ -40,6 +40,10 @@ this.Registration = React.createClass({
 
   },
 
+  validateUser(email, name, password, college) {
+
+  },
+
   registerUser() {
     var email = $("#email").val();
     var name = $("#fname").val() + $('#lname').val();
