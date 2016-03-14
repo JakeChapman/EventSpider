@@ -33,7 +33,7 @@ FlowRouter.route('/', {
 
 FlowRouter.route('/feed/:key', {
   action: function(params) {
-    ReactLayout.render(MainLayout, {content: <EventShowContainer key={params.key}/>});
+    ReactLayout.render(MainLayout, {content: <EventShowContainer selector={params.key}/>});
   }
 });
 

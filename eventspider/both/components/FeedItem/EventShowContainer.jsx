@@ -15,7 +15,7 @@ this.EventShowContainer = React.createClass({
 
         return {
             feedReady: sub.ready(),
-            eventItem: EventsDomain.getSelectEvent(this.props.key)
+            eventItem: EventsDomain.getSelectEvent(this.props.selector)
         };
     },
     

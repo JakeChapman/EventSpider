@@ -29,3 +29,5 @@ meteorhacks:search-source
 aldeed:simple-schema
 dburles:collection-helpers
 mizzao:bootboxjs
+semantic:ui
+flemay:less-autoprefixer

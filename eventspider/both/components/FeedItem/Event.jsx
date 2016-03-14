@@ -28,7 +28,7 @@ this.FeedEvent = React.createClass({
 
       let trimmed_descrip = this.props.descrip.substring(0, 60) + "...";
 
-      return <div className="card" onClick={this.expandEvent}>
+      return <div className="ui raised container segment" onClick={this.expandEvent}>
         <div className="feed">
           <div id="sub-icon">
             <i className="zmdi zmdi-run zmdi-hc-3x"/>
