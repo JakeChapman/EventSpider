@@ -9,8 +9,8 @@
     position: relative;
   }
   #logo {
-    height: 30%;
-    width: 30%;
+    height: 25%;
+    width: 40%;
     margin: 0 auto;
     display: block;
     margin-left: auto;
@@ -72,25 +72,25 @@
     margin-left: 10%;
     margin-right: 10%;
     width: 80%;
-    height: 5%;
-    margin-bottom: 2%;
+    /*height: 5%;
+    margin-bottom: 2%;*/
   }
   .social-login button {
-    position: relative;
     width: 100%;
-    margin: 0 auto;
+    /*margin: 0 auto;
     text-align: center;
     vertical-align: middle;
-    height: 5%;
-    margin-bottom: 2%;
+    height: 5%;*/
   }
   .social-login #facebook i {
     color: #3234ee;
-    position: relative;
-    height: 80%;
+    padding-right: 5%;
+    /*position: relative;
+    height: 80%;*/
   }
   .social-login #google i {
     color: #eb1515;
+    padding-right: 5%;
   }
 
   #login-break{
@@ -98,6 +98,10 @@
     text-align: center;
     margin: 10px 0 20px;
     color: white;
+  }
+
+  #newUser span {
+    padding-right: 5%;
   }
   /*#login-break span {
       opacity: 1;

@@ -40,11 +40,11 @@ this.Login = React.createClass({
         <div className="login-content">
           <img alt="Company Image" id="logo" src="logo.png"/>
           <div className='social-login'>
-            <button className="btn btn-lg" id='facebook'>
+            <button className="ui button" id='facebook'>
               <i className="zmdi zmdi-facebook-box zmdi-hc-2x"></i>
               Sign in with Facebook
             </button>
-            <button className="btn btn-lg" id='google'>
+            <button className="ui button" id='google'>
               <i className="zmdi zmdi-google-plus zmdi-hc-2x"></i>
               Sign in with Google+
             </button>
